@@ -30,6 +30,10 @@ module.exports = {
         "paragraph-small": ["0.875rem", "1.4rem"],
         // font-size: 14px, line-height: 22.4px
       },
+
+      width: {
+        "17/20": "85%",
+      },
       colors: {
         "app-green-primary": "#70C174",
         "app-green-secondary": "#BEF3C0",
@@ -40,6 +44,25 @@ module.exports = {
         "app-off-white": "#EBF0F9",
         "app-border": "#E5E5E5",
       },
+    },
+    screens: {
+      "2xl": { max: "1535px" },
+      // => @media (max-width: 1535px) { ... }
+
+      xl: { max: "1279px" },
+      // => @media (max-width: 1279px) { ... }
+
+      lg: { max: "1023px" },
+      // => @media (max-width: 1023px) { ... }
+
+      md: { max: "767px" },
+      // => @media (max-width: 767px) { ... }
+
+      sm: { max: "639px" },
+      // => @media (max-width: 639px) { ... }
+
+      xs: { max: "474px" },
+      // => @media (max-width: 639px) { ... }
     },
   },
   plugins: [],

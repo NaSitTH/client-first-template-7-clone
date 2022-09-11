@@ -4,8 +4,8 @@ import { footerUrl } from "../../data/Url";
 
 const Footer = () => {
   return (
-    <footer className="w-screen bg-app-black py-24 text-white xl:py-20 lg:py-16">
-      <div className="mx-auto flex max-w-7xl justify-between 2xl:w-17/20 lg:grid lg:grid-cols-3 lg:gap-y-16 sm:grid-cols-1 sm:gap-y-10">
+    <footer className="z-30 w-screen bg-app-black py-24 text-white xl:py-20 lg:py-16">
+      <div className="app-container flex justify-between lg:grid lg:grid-cols-3 lg:gap-y-16 sm:grid-cols-1 sm:gap-y-10">
         <h4 className="col-span-1 w-24">Logo</h4>
         <div className="flex space-x-20 xl:space-x-14 lg:col-span-2 lg:space-x-20 md:justify-between md:space-x-0 sm:col-span-1">
           <ol className="flex flex-col space-y-6 text-paragraph-small">

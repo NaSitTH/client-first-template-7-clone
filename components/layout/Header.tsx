@@ -18,13 +18,13 @@ const Header = () => {
   };
 
   return (
-    <header className="mx-auto flex h-[67px] max-w-7xl items-center justify-between 2xl:w-17/20">
+    <header className="app-container z-30 flex h-[67px] items-center justify-between">
       <Link href={navUrl.home}>
         <a className="flex h-full items-center">
           <h4>Logo</h4>
         </a>
       </Link>
-      <ul className="flex items-center space-x-10 font-medium leading-[1.1875rem] lg:space-x-5 md:hidden">
+      <ul className="flex items-center space-x-10 text-button font-medium lg:space-x-5 md:hidden">
         <li>
           <NavLink url="/" title="Home" />
         </li>

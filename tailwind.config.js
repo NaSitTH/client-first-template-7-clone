@@ -32,6 +32,7 @@ module.exports = {
       },
 
       width: {
+        "14/20": "70%",
         "17/20": "85%",
       },
       colors: {

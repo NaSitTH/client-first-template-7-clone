@@ -1,23 +1,8 @@
 import Link from "next/link";
 
-interface IUrl {
-  url: {
-    aboutUs: string;
-    team: string;
-    whatWeDo: string;
-    contact: string;
-    projects: string;
-    events: string;
-    donate: string;
-    blog: string;
-    facebook: string;
-    instagram: string;
-    twitter: string;
-    linkedin: string;
-  };
-}
+import { footerUrl } from "../../data/Url";
 
-const Footer = ({ url }: IUrl) => {
+const Footer = () => {
   return (
     <footer className="w-screen bg-app-black py-24 text-white xl:py-20 lg:py-16">
       <div className="mx-auto flex max-w-7xl justify-between 2xl:w-17/20 lg:grid lg:grid-cols-3 lg:gap-y-16 sm:grid-cols-1 sm:gap-y-10">
@@ -28,16 +13,16 @@ const Footer = ({ url }: IUrl) => {
               <p className="font-bold">Our team</p>
             </li>
             <li>
-              <Link href={url.aboutUs}>About us</Link>
+              <Link href={footerUrl.aboutUs}>About us</Link>
             </li>
             <li>
-              <Link href={url.team}>Team</Link>
+              <Link href={footerUrl.team}>Team</Link>
             </li>
             <li>
-              <Link href={url.whatWeDo}>What we do</Link>
+              <Link href={footerUrl.whatWeDo}>What we do</Link>
             </li>
             <li>
-              <Link href={url.contact}>Contact</Link>
+              <Link href={footerUrl.contact}>Contact</Link>
             </li>
           </ol>
           <ol className="flex flex-col space-y-6 text-paragraph-small">
@@ -45,16 +30,16 @@ const Footer = ({ url }: IUrl) => {
               <p className="font-bold">More</p>
             </li>
             <li>
-              <Link href={url.projects}>Projects</Link>
+              <Link href={footerUrl.projects}>Projects</Link>
             </li>
             <li>
-              <Link href={url.events}>Evens</Link>
+              <Link href={footerUrl.events}>Evens</Link>
             </li>
             <li>
-              <Link href={url.donate}>Donate</Link>
+              <Link href={footerUrl.donate}>Donate</Link>
             </li>
             <li>
-              <Link href={url.blog}>Blog</Link>
+              <Link href={footerUrl.blog}>Blog</Link>
             </li>
           </ol>
           <ol className="flex flex-col space-y-6 text-paragraph-small">
@@ -62,16 +47,16 @@ const Footer = ({ url }: IUrl) => {
               <p className="font-bold">Contact</p>
             </li>
             <li>
-              <Link href={url.facebook}>Facebook</Link>
+              <Link href={footerUrl.facebook}>Facebook</Link>
             </li>
             <li>
-              <Link href={url.instagram}>Instagram</Link>
+              <Link href={footerUrl.instagram}>Instagram</Link>
             </li>
             <li>
-              <Link href={url.twitter}>Twitter</Link>
+              <Link href={footerUrl.twitter}>Twitter</Link>
             </li>
             <li>
-              <Link href={url.linkedin}>Linkedin</Link>
+              <Link href={footerUrl.linkedin}>Linkedin</Link>
             </li>
           </ol>
         </div>

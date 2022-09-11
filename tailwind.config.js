@@ -29,6 +29,8 @@ module.exports = {
         // font-size: 16px, line-height: 25.6px
         "paragraph-small": ["0.875rem", "1.4rem"],
         // font-size: 14px, line-height: 22.4px
+        button: ["1rem", "1.171875rem"],
+        // font-size: 16px, line-height: 18.75px
       },
 
       width: {

@@ -44,3 +44,7 @@
 .app-container {
   @apply mx-auto max-w-7xl 2xl:w-17/20;
 }
+
+.app-section-mt {
+  @apply mt-24;
+}

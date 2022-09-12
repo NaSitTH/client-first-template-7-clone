@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { HomeHeroSection } from "../components/home";
+import { HomeAboutSection, HomeHeroSection } from "../components/home";
 
 const Home: NextPage = () => {
   return (
@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <HomeHeroSection />
 
       {/* About us */}
-
+      <HomeAboutSection />
       {/* What we do */}
 
       {/* Projects */}

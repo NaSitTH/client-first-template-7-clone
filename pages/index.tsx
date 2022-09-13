@@ -1,6 +1,10 @@
 import type { NextPage } from "next";
 import LogoRow from "../components/common/LogoRow";
-import { HomeAboutSection, HomeHeroSection } from "../components/home";
+import {
+  HomeAboutSection,
+  HomeHeroSection,
+  HomeWhatWeDoSection,
+} from "../components/home";
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +19,7 @@ const Home: NextPage = () => {
       <LogoRow />
 
       {/* What we do */}
-
+      <HomeWhatWeDoSection />
       {/* Projects */}
 
       {/* Donation */}

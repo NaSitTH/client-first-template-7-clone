@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import LogoRow from "../components/common/LogoRow";
 import { HomeAboutSection, HomeHeroSection } from "../components/home";
 
 const Home: NextPage = () => {
@@ -9,6 +10,10 @@ const Home: NextPage = () => {
 
       {/* About us */}
       <HomeAboutSection />
+
+      {/* Logo Row */}
+      <LogoRow />
+
       {/* What we do */}
 
       {/* Projects */}

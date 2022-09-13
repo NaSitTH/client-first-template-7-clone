@@ -48,3 +48,11 @@
 .app-section-mt {
   @apply mt-24;
 }
+
+.logo-icon {
+  @apply h-7 w-7;
+}
+
+.logo-wrapper {
+  @apply flex items-center space-x-2;
+}

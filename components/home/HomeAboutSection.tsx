@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { ButtonLink, TitleSection } from "../common";
 
@@ -21,7 +22,14 @@ const HomeAboutSection = () => {
           <ButtonLink url="/" title="Learn more" isPrimary />
         </div>
       </div>
-      <div className="h-[578px] w-3/5 bg-red-200">{/* Image */}</div>
+      <div className="relative h-[578px] w-3/5 overflow-hidden rounded-xl">
+        <Image
+          src="/images/BG_2.png"
+          alt="kid image"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
     </section>
   );
 };

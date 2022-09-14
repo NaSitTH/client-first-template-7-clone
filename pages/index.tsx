@@ -4,6 +4,7 @@ import {
   HomeAboutSection,
   HomeHeroSection,
   HomeProjectSection,
+  HomeStatsSection,
   HomeWhatWeDoSection,
 } from "../components/home";
 
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
       <HomeProjectSection />
 
       {/* Donation */}
+      <HomeStatsSection />
 
       {/* Join */}
 

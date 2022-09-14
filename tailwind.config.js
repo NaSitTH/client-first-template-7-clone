@@ -46,6 +46,10 @@ module.exports = {
         "app-secondary-text": "#525560",
         "app-off-white": "#EBF0F9",
         "app-border": "#E5E5E5",
+        "app-purple": "#AC94F1",
+        "app-pink": "#F38FBF",
+        'app-yellow-primary':'#F9CF64',
+        'app-yellow-secondary':'#FFF0CA'
       },
     },
     screens: {

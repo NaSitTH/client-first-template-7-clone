@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaRegBuilding } from "react-icons/fa";
+import { FaDog, FaRegBuilding, FaTree, FaWater } from "react-icons/fa";
 import { FunctionCard, TitleSection } from "../common";
 
 const HomeWhatWeDoSection = () => {
@@ -24,17 +24,17 @@ const HomeWhatWeDoSection = () => {
               <FunctionCard
                 title="Tree Plantation"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
-                icon={<FaRegBuilding />}
+                icon={<FaTree />}
               />
               <FunctionCard
                 title="Protect Land and Water"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
-                icon={<FaRegBuilding />}
+                icon={<FaWater />}
               />
               <FunctionCard
                 title="Animal Safety"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
-                icon={<FaRegBuilding />}
+                icon={<FaDog />}
               />
             </div>
           </div>

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { CtaSection, LogoRow } from "../components/common";
+import { BlogSection, CtaSection, LogoRow } from "../components/common";
 import {
   HomeAboutSection,
   HomeHeroSection,
@@ -33,6 +33,7 @@ const Home: NextPage = () => {
       <CtaSection />
 
       {/* News */}
+      <BlogSection />
 
       {/* Events */}
     </>

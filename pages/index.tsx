@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { LogoRow } from "../components/common";
+import { CtaSection, LogoRow } from "../components/common";
 import {
   HomeAboutSection,
   HomeHeroSection,
@@ -30,6 +30,7 @@ const Home: NextPage = () => {
       <HomeStatsSection />
 
       {/* Join */}
+      <CtaSection />
 
       {/* News */}
 

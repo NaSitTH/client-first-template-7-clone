@@ -7,7 +7,7 @@ const BlogSection = () => {
       <h2 className="text-[2.5rem] leading-[3.5rem] text-app-primary-text">
         Read Our News
       </h2>
-      <div className="mt-12">
+      <div className="mt-12 h-[360px]">
         <BlogPosts />
       </div>
     </section>

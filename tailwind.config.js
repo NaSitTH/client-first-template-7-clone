@@ -48,8 +48,8 @@ module.exports = {
         "app-border": "#E5E5E5",
         "app-purple": "#AC94F1",
         "app-pink": "#F38FBF",
-        'app-yellow-primary':'#F9CF64',
-        'app-yellow-secondary':'#FFF0CA'
+        "app-yellow-primary": "#F9CF64",
+        "app-yellow-secondary": "#FFF0CA",
       },
     },
     screens: {
@@ -72,5 +72,5 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

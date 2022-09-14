@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
-import LogoRow from "../components/common/LogoRow";
+import { LogoRow } from "../components/common";
 import {
   HomeAboutSection,
   HomeHeroSection,
+  HomeProjectSection,
   HomeWhatWeDoSection,
 } from "../components/home";
 
@@ -20,7 +21,9 @@ const Home: NextPage = () => {
 
       {/* What we do */}
       <HomeWhatWeDoSection />
+
       {/* Projects */}
+      <HomeProjectSection />
 
       {/* Donation */}
 

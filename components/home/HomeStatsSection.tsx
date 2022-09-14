@@ -1,5 +1,38 @@
 import React from "react";
-import { StatsCard } from "../common";
+import { DoughnutChart, StatsCard } from "../common";
+
+const statistics = [
+  {
+    id: 1,
+    value: 40,
+    title: "planting trees",
+    color: "bg-app-green-secondary",
+  },
+  {
+    id: 2,
+    value: 35,
+    title: "cleanliness program",
+    color: "bg-app-purple",
+  },
+  {
+    id: 3,
+    value: 10,
+    title: "helping people",
+    color: "bg-app-yellow-secondary",
+  },
+  {
+    id: 4,
+    value: 10,
+    title: "animal safety",
+    color: "bg-app-yellow-primary",
+  },
+  {
+    id: 5,
+    value: 5,
+    title: "feeding the poor",
+    color: "bg-app-pink",
+  },
+];
 
 const HomeStatsSection = () => {
   return (
@@ -11,37 +44,16 @@ const HomeStatsSection = () => {
             We understand that when you make a  donation, you want to know
             exactly where your money is going and we pledge to be transparent.
           </p>
-          <div className="grid auto-cols-auto grid-flow-row grid-cols-3 pt-8">
-            <StatsCard
-              title="planting trees"
-              value={40}
-              bgColor="bg-app-green-secondary"
-            />
-            <StatsCard
-              title="cleanliness program"
-              value={35}
-              bgColor="bg-app-purple"
-            />
-            <StatsCard
-              title="helping people"
-              value={10}
-              bgColor="bg-app-yellow-secondary"
-            />
-            <StatsCard
-              title="animal safety"
-              value={10}
-              bgColor="bg-app-yellow-primary"
-            />
-            <StatsCard
-              title="feeding the poor"
-              value={5}
-              bgColor="bg-app-pink"
-            />
+          <div className="grid auto-cols-auto grid-flow-row grid-cols-3 gap-y-4 pt-8">
+            {statistics.map((data) => {
+              return <StatsCard key={data.id} data={data} />;
+            })}
           </div>
         </div>
         <div className="flex w-5/6 justify-end">
-          <div className="flex h-[375px] w-[375px] items-center justify-center bg-red-200">
-            <h3>Chart Here</h3>
+          <div className="relative flex h-[375px] w-[375px] items-center justify-center">
+            <DoughnutChart data={statistics} />
+            <h3 className="absolute text-white">LOGO</h3>
           </div>
         </div>
       </div>

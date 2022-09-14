@@ -11,3 +11,4 @@ export { default as BlogPosts } from "./BlogPosts";
 export { default as BlogCard } from "./BlogCard";
 export { default as EventsSection } from "./EventsSection";
 export { default as EventCard } from "./EventCard";
+export { default as DoughnutChart } from "./DoughnutChart";

@@ -9,3 +9,5 @@ export { default as CtaSection } from "./CtaSection";
 export { default as BlogSection } from "./BlogSection";
 export { default as BlogPosts } from "./BlogPosts";
 export { default as BlogCard } from "./BlogCard";
+export { default as EventsSection } from "./EventsSection";
+export { default as EventCard } from "./EventCard";

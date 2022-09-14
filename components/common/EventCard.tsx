@@ -1,18 +1,24 @@
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 
+import { format } from "date-fns";
+
 type AppProps = {
   title: string;
+  date: Date;
   url: string;
 };
 
-const EventCard = ({ title, url }: AppProps) => {
+const EventCard = ({ title, date, url }: AppProps) => {
+  let month = format(date, "MMM");
+  let year = format(date, "yy");
+
   return (
     <Link href={url}>
       <a className="flex w-full justify-between space-x-6 rounded-lg bg-app-green-secondary pl-10 pr-12 text-app-primary-text">
         <div className="mt-8">
-          <h2 className="font-medium">23</h2>
-          <p className="text-button tracking-[0.125em]">SEP</p>
+          <h2 className="font-medium">{year}</h2>
+          <p className="text-button tracking-[0.125em]">{month}</p>
         </div>
         <div className="my-12">
           <div className="flex items-center space-x-6">

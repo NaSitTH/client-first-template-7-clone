@@ -1,4 +1,5 @@
-import { ProjectCard, ProjectRow, TitleSection } from "../common";
+import { ProjectRow } from "../common";
+import { TitleSection } from "../common/section";
 
 const HomeProjectSection = () => {
   return (

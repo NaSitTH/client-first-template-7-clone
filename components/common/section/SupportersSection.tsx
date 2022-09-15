@@ -7,7 +7,7 @@ import {
   FaWindows,
 } from "react-icons/fa";
 
-const LogoRow = () => {
+const SupportersSection = () => {
   return (
     <section className="app-container my-16">
       <div className="flex text-app-primary-text">
@@ -47,4 +47,4 @@ const LogoRow = () => {
     </section>
   );
 };
-export default LogoRow;
+export default SupportersSection;

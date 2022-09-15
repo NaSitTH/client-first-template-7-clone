@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { FaDog, FaRegBuilding, FaTree, FaWater } from "react-icons/fa";
-import { FunctionCard, TitleSection } from "../common";
+import { FunctionCard } from "../common/card";
+import { TitleSection } from "../common/section";
 
 const HomeWhatWeDoSection = () => {
   return (

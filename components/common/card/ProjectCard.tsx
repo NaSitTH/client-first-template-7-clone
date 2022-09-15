@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "../ButtonLink";
 
 type AppProps = {
   title: string;

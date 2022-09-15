@@ -1,5 +1,6 @@
 import React from "react";
-import { DoughnutChart, StatsCard } from "../common";
+import { StatsCard } from "../common/card";
+import DoughnutChart from "../common/chart/DoughnutChart";
 
 const statistics = [
   {

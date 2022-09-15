@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "../ButtonLink";
 
 const CtaSection = () => {
   return (

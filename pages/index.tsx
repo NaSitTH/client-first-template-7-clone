@@ -1,10 +1,5 @@
 import type { NextPage } from "next";
-import {
-  BlogSection,
-  CtaSection,
-  EventsSection,
-  LogoRow,
-} from "../components/common";
+
 import {
   HomeAboutSection,
   HomeHeroSection,
@@ -12,6 +7,8 @@ import {
   HomeStatsSection,
   HomeWhatWeDoSection,
 } from "../components/home";
+
+import { BlogSection, CtaSection, EventsSection, SupportersSection } from "../components/common/section";
 
 const Home: NextPage = () => {
   return (
@@ -23,7 +20,7 @@ const Home: NextPage = () => {
       <HomeAboutSection />
 
       {/* Logo Row */}
-      <LogoRow />
+      <SupportersSection />
 
       {/* What we do */}
       <HomeWhatWeDoSection />

@@ -1,14 +1,3 @@
 export { default as ButtonLink } from "./ButtonLink";
-export { default as TitleSection } from "./TitleSection";
-export { default as FunctionCard } from "./FunctionCard";
-export { default as LogoRow } from "./LogoRow";
-export { default as ProjectCard } from "./ProjectCard";
 export { default as ProjectRow } from "./ProjectRow";
-export { default as StatsCard } from "./StatsCard";
-export { default as CtaSection } from "./CtaSection";
-export { default as BlogSection } from "./BlogSection";
 export { default as BlogPosts } from "./BlogPosts";
-export { default as BlogCard } from "./BlogCard";
-export { default as EventsSection } from "./EventsSection";
-export { default as EventCard } from "./EventCard";
-export { default as DoughnutChart } from "./DoughnutChart";

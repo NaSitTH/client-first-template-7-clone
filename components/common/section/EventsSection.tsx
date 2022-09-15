@@ -1,5 +1,5 @@
 import { parse } from "date-fns";
-import EventCard from "./EventCard";
+import { EventCard } from "../card";
 
 const EventsSection = () => {
   return (

@@ -9,7 +9,6 @@ type AppProps = {
 const NavLink = ({ url, title }: AppProps) => {
   const router = useRouter();
   const currentRoute = router.pathname;
-  console.log(currentRoute);
   return (
     <Link href={url}>
       <a

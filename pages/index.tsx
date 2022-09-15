@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       {/* About us */}
       <HomeAboutSection />
 
-      {/* Logo Row */}
+      {/* Supporters */}
       <SupportersSection />
 
       {/* What we do */}
@@ -28,13 +28,13 @@ const Home: NextPage = () => {
       {/* Projects */}
       <HomeProjectSection />
 
-      {/* Donation */}
+      {/* Stats */}
       <HomeStatsSection />
 
-      {/* Join */}
+      {/* CTA */}
       <CtaSection />
 
-      {/* News */}
+      {/* Blogs */}
       <BlogSection />
 
       {/* Events */}

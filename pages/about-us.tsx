@@ -1,30 +1,47 @@
 import type { NextPage } from "next";
-import { AboutHeaderSection } from "../components/about";
+import {
+  AboutAwardsSection,
+  AboutHeaderSection,
+  AboutJourneySection,
+  AboutMissionSection,
+  AboutTeamSection,
+  AboutVideoSection,
+} from "../components/about";
+import {
+  BlogSection,
+  CtaSection,
+  EventsSection,
+} from "../components/common/section";
 
-const AboutUs:NextPage = () => {
+const AboutUs: NextPage = () => {
   return (
     <>
-    {/* Header */}
-    <AboutHeaderSection/>
-    
-    {/* Our mission */}
+      {/* Header */}
+      <AboutHeaderSection />
 
-    {/* Awards */}
+      {/* Our mission */}
+      <AboutVideoSection />
+      <AboutMissionSection />
 
-    {/* Our journey */}
+      {/* Awards */}
+      <AboutAwardsSection />
 
-    {/* Our team */}
+      {/* Our journey */}
+      <AboutJourneySection />
 
-    {/* CTA */}
+      {/* Our team */}
+      <AboutTeamSection />
 
-    {/* Blogs */}
+      {/* CTA */}
+      <CtaSection />
 
-    {/* Events */}
-    
-    
+      {/* Blogs */}
+      <BlogSection />
+
+      {/* Events */}
+      <EventsSection />
     </>
+  );
+};
 
-  )
-}
-
-export default AboutUs
+export default AboutUs;

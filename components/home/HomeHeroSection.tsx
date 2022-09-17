@@ -7,7 +7,7 @@ const HomeHeroSection = () => {
     <section className="relative block">
       <Image
         src="/images/BG_1.png"
-        alt="hero background"
+        alt="forest"
         width={1500}
         height={735}
         layout="responsive"

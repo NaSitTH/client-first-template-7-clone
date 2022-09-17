@@ -13,8 +13,10 @@ const FunctionCard = ({ title, text, icon }: AppProps) => {
         <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-[#83D187]">
           {icon}
         </div>
-        <div className="">
-          <p className="text-2xl font-bold leading-[1.76rem]">{title}</p>
+        <div>
+          <p className="text-2xl font-bold leading-[1.76rem] text-app-primary-text">
+            {title}
+          </p>
           <p className="mt-2 text-app-secondary-text">{text}</p>
         </div>
       </div>

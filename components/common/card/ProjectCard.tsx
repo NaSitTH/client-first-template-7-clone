@@ -11,12 +11,7 @@ type AppProps = {
 const ProjectCard = ({ title, text, image, url }: AppProps) => {
   return (
     <div className="relative h-full w-full overflow-hidden rounded-xl">
-      <Image
-        src={image}
-        alt={`${title} image`}
-        layout="fill"
-        objectFit="cover"
-      />
+      <Image src={image} alt={title} layout="fill" objectFit="cover" />
       <div className="h-full w-full bg-app-black opacity-50"></div>
       <div className="absolute top-0 left-0 flex h-full w-full flex-col justify-between p-12 text-white">
         <div className="mt-8">

@@ -10,9 +10,9 @@ const HomeWhatWeDoSection = () => {
       <div className="app-container flex items-center">
         <div className="w-full">
           <TitleSection title="WHAT WE DO" />
-          <div className="mx-24 mt-8">
+          <div className="mx-24 mt-8 text-app-primary-text">
             <h2>We care for earth, care for the coming birth</h2>
-            <p className="mt-4">
+            <p className="mt-4 text-app-secondary-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique.
             </p>
@@ -43,7 +43,7 @@ const HomeWhatWeDoSection = () => {
         <div className="relative h-[658px] w-3/5 overflow-hidden rounded-xl">
           <Image
             src="/images/Image_5.png"
-            alt="man with dog"
+            alt="man playing with dog"
             layout="fill"
             objectFit="cover"
           />

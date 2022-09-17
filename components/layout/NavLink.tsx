@@ -13,7 +13,7 @@ const NavLink = ({ url, title }: AppProps) => {
     <Link href={url}>
       <a
         className={
-          currentRoute === url ? "text-black" : "text-app-primary-text"
+          currentRoute === url ? "text-black" : "text-app-secondary-text"
         }
       >
         {title}

@@ -17,7 +17,7 @@ const ContactFormSection = () => {
   const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
-    <section className="app-section-mt mx-auto max-w-3xl">
+    <section className="app-section-mt mx-auto max-w-3xl" id="form">
       <form
         className="flex flex-col space-y-8 text-paragraph text-app-primary-text"
         onSubmit={onSubmit}

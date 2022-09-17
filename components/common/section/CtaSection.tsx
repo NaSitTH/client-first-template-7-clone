@@ -18,8 +18,12 @@ const CtaSection = () => {
             You can contribute to make the environment greener!
           </h2>
           <div className="flex w-1/2 justify-center space-x-8">
-            <ButtonLink url="/" title="Join as a volunteer" isPrimary />
-            <ButtonLink url="/" title="Donate" />
+            <ButtonLink
+              url="/contact#form"
+              title="Join as a volunteer"
+              isPrimary
+            />
+            <ButtonLink url="/donation" title="Donate" />
           </div>
         </div>
       </div>

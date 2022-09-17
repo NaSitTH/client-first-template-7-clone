@@ -18,7 +18,7 @@ const HomeHeroSection = () => {
             Save the environment today for a better tomorrow
           </h1>
           <div className="flex items-center space-x-6">
-            <ButtonLink url="/" title="What we do" />
+            <ButtonLink url="#what-we-do" title="What we do" />
             <div className="flex items-center space-x-2 px-4">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white">
                 <FaPlay className="h-2 w-2 text-black" />

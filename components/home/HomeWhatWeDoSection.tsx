@@ -6,7 +6,7 @@ import { TitleSection } from "../common/section";
 
 const HomeWhatWeDoSection = () => {
   return (
-    <section className="w-screen bg-app-green-tertiary py-24">
+    <section className="w-screen bg-app-green-tertiary py-24" id="what-we-do">
       <div className="app-container flex items-center">
         <div className="w-full">
           <TitleSection title="WHAT WE DO" />

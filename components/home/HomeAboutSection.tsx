@@ -20,7 +20,7 @@ const HomeAboutSection = () => {
             id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique
             posuere.
           </p>
-          <ButtonLink url="/" title="Learn more" isPrimary />
+          <ButtonLink url="/about-us" title="Learn more" isPrimary />
         </div>
       </div>
       <div className="relative h-[578px] w-3/5 overflow-hidden rounded-xl">

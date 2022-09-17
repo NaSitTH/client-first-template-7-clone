@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { MediaBlogSection, MediaHeaderSection } from "../components/media";
 import { EventsSection } from "../components/common/section";
 
-const media: NextPage = () => {
+const Media: NextPage = () => {
   return (
     <>
       {/* Header */}
@@ -16,4 +16,4 @@ const media: NextPage = () => {
     </>
   );
 };
-export default media;
+export default Media;

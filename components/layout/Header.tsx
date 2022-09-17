@@ -40,9 +40,9 @@ const Header = () => {
         <li>
           <NavLink url={navUrl.contact} title="Contact" />
         </li>
-        <li className="flex h-[43px] items-center rounded bg-app-primary-text px-8 text-white lg:px-6">
+        <li className="flex items-center rounded bg-app-primary-text text-white lg:px-6">
           <Link href={navUrl.donate}>
-            <a className="">Donate</a>
+            <a className="px-8 py-4">Donate</a>
           </Link>
         </li>
       </ul>

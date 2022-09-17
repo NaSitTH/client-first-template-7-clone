@@ -29,6 +29,13 @@ module.exports = {
         // font-size: 16px, line-height: 25.6px
         "paragraph-small": ["0.875rem", "1.4rem"],
         // font-size: 14px, line-height: 22.4px
+        button: ["1rem", "1.171875rem"],
+        // font-size: 16px, line-height: 18.75px
+      },
+
+      width: {
+        "14/20": "70%",
+        "17/20": "85%",
       },
       colors: {
         "app-green-primary": "#70C174",
@@ -39,8 +46,31 @@ module.exports = {
         "app-secondary-text": "#525560",
         "app-off-white": "#EBF0F9",
         "app-border": "#E5E5E5",
+        "app-purple": "#AC94F1",
+        "app-pink": "#F38FBF",
+        "app-yellow-primary": "#F9CF64",
+        "app-yellow-secondary": "#FFF0CA",
       },
     },
+    screens: {
+      "2xl": { max: "1535px" },
+      // => @media (max-width: 1535px) { ... }
+
+      xl: { max: "1279px" },
+      // => @media (max-width: 1279px) { ... }
+
+      lg: { max: "1023px" },
+      // => @media (max-width: 1023px) { ... }
+
+      md: { max: "767px" },
+      // => @media (max-width: 767px) { ... }
+
+      sm: { max: "639px" },
+      // => @media (max-width: 639px) { ... }
+
+      xs: { max: "474px" },
+      // => @media (max-width: 639px) { ... }
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

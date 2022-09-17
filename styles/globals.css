@@ -40,3 +40,19 @@
     @apply text-paragraph font-normal;
   }
 }
+
+.app-container {
+  @apply mx-auto max-w-7xl 2xl:w-17/20;
+}
+
+.app-section-mt {
+  @apply mt-24;
+}
+
+.logo-icon {
+  @apply h-7 w-7;
+}
+
+.logo-wrapper {
+  @apply flex items-center space-x-2;
+}

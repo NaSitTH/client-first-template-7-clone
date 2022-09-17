@@ -5,7 +5,7 @@ const AboutMissionSection = () => {
     <section className="-mt-[224px] w-screen bg-app-green-tertiary text-app-primary-text">
       <div className="app-container flex space-x-24 px-24 pt-80">
         <div className="">
-          <p className="text-button font-bold">OUR MISSON</p>
+          <p className="text-button font-bold tracking-[0.125em]">OUR MISSON</p>
           <h3 className="mt-4">
             We make the world we save our own environment
           </h3>
@@ -18,7 +18,7 @@ const AboutMissionSection = () => {
           </p>
         </div>
         <div className="">
-          <p className="text-button font-bold">OUR MISSON</p>
+          <p className="text-button font-bold tracking-[0.125em]">OUR MISSON</p>
           <h3 className="mt-4">
             Plant more trees to make world air pollution free
           </h3>

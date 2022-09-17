@@ -12,7 +12,7 @@ import {
   EventsSection,
 } from "../components/common/section";
 
-const services: NextPage = () => {
+const Services: NextPage = () => {
   return (
     <>
       {/* Header */}
@@ -35,4 +35,4 @@ const services: NextPage = () => {
     </>
   );
 };
-export default services;
+export default Services;

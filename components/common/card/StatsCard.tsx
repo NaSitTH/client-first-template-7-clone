@@ -1,6 +1,6 @@
 import React from "react";
 
-type AppProps = {
+type Props = {
   data: {
     id: number;
     value: number;
@@ -9,7 +9,7 @@ type AppProps = {
   };
 };
 
-const StatsCard = ({ data }: AppProps) => {
+const StatsCard = ({ data }: Props) => {
   return (
     <div className="flex items-center space-x-1">
       <span className={`h-4 w-4 rounded ${data.color}`} />

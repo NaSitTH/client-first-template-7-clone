@@ -1,12 +1,12 @@
 import { IconContext } from "react-icons";
 
-type AppProps = {
+type Props = {
   title: string;
   text: string;
   icon: JSX.Element;
 };
 
-const FunctionCard = ({ title, text, icon }: AppProps) => {
+const FunctionCard = ({ title, text, icon }: Props) => {
   return (
     <IconContext.Provider value={{ className: "text-[#DDFFDF] w-4 h-4" }}>
       <div className="flex space-x-6">

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type AppProps = {
+type Props = {
   title: string;
   text: string;
   image: string;
@@ -10,7 +10,7 @@ type AppProps = {
   isRow?: boolean;
 };
 
-const BlogCard = ({ title, text, image, url, isRow }: AppProps) => {
+const BlogCard = ({ title, text, image, url, isRow }: Props) => {
   return (
     <Link href={url}>
       <a

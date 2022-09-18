@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-type AppProps = {
+type Props = {
   url: string;
   title: string;
 };
 
-const NavLink = ({ url, title }: AppProps) => {
+const NavLink = ({ url, title }: Props) => {
   const router = useRouter();
   const currentRoute = router.pathname;
   return (

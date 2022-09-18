@@ -1,7 +1,7 @@
 export const navUrl = {
   home: "/",
   aboutUs: "/about-us",
-  whatWeDo: "/services",
+  whatWeDo: "/projects",
   media: "/media",
   contact: "/contact",
   donate: "/donation",
@@ -11,7 +11,7 @@ export const footerUrl = {
   home: "/",
   aboutUs: "/about-us",
   team: "/about-us#team",
-  whatWeDo: "/services",
+  whatWeDo: "/projects",
   contact: "/contact",
   projects: "/#projects",
   events: "/#events",

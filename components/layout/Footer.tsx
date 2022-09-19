@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { footerUrl } from "../../data/Url";
+import { footerUrl } from "../../lib/constant";
 
 const Footer = () => {
   return (

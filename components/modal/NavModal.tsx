@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { FaTimes } from "react-icons/fa";
 import { NavLink } from "../layout";
-import { navUrl } from "../../lib/Url";
+import { navUrl } from "../../lib/constant";
 
 type Props = {
   handleClick: () => void;

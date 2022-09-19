@@ -4,7 +4,7 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import { FaBars } from "react-icons/fa";
 import { Backdrop, NavModal } from "../modal";
-import { navUrl } from "../../data/Url";
+import { navUrl } from "../../lib/constant";
 
 const Header = () => {
   const [navIsOpen, setNavOpen] = useState(false);

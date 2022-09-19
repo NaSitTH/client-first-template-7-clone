@@ -5,6 +5,7 @@ type ProjectType = {
       excerpt: string;
       coverImage: string;
       slug: string;
+      content: string;
     }
   ];
 };

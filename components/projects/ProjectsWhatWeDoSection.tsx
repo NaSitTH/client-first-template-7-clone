@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { FunctionCard } from "../common/card";
 
-const ServicesWhatWeDoSection = () => {
+const ProjectsWhatWeDoSection = () => {
   return (
     <section className="app-section-mt bg-app-green-tertiary py-24">
       <div className="app-container">
@@ -49,4 +49,4 @@ const ServicesWhatWeDoSection = () => {
     </section>
   );
 };
-export default ServicesWhatWeDoSection;
+export default ProjectsWhatWeDoSection;

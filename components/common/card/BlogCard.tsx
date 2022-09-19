@@ -4,13 +4,13 @@ import React from "react";
 
 type Props = {
   title: string;
-  text: string;
+  excerpt: string;
   image: string;
   url: string;
   isRow?: boolean;
 };
 
-const BlogCard = ({ title, text, image, url, isRow }: Props) => {
+const BlogCard = ({ title, excerpt, image, url, isRow }: Props) => {
   return (
     <Link href={url}>
       <a
@@ -26,7 +26,7 @@ const BlogCard = ({ title, text, image, url, isRow }: Props) => {
             {title}
           </p>
           <p className="mt-2 text-app-secondary-text line-clamp-3 group-hover:line-clamp-none">
-            {text}
+            {excerpt}
           </p>
         </div>
       </a>

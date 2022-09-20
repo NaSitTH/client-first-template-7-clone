@@ -1,5 +1,5 @@
 import { ProjectType } from "../../interfaces/project";
-import { ProjectRow } from "../common";
+import { ProjectCard } from "../common/card";
 
 type AllProjectsType = {
   allProjects: Array<ProjectType>;
@@ -14,8 +14,18 @@ const ProjectsProjectSection = ({ allProjects }: AllProjectsType) => {
       <h2 className="mx-auto mt-4 w-4/6 text-center">
         We are Creating sustainable society, for everyone and forever.
       </h2>
-      <div className="mt-16">
-        <ProjectRow allProjects={allProjects} />
+      <div className="mt-16 grid grid-cols-3 gap-6">
+        {allProjects.map((data) => {
+          return (
+            <ProjectCard
+              key={data.title}
+              title={data.title}
+              excerpt={data.excerpt}
+              image={data.coverImage}
+              url={`/projects/${data.slug}`}
+            />
+          );
+        })}
       </div>
     </section>
   );

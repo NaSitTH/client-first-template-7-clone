@@ -12,9 +12,13 @@ import {
   SupportersSection,
 } from "../components/common/section";
 import { getAllProjects } from "../lib/api";
-import ProjectType from "../interfaces/project";
+import { ProjectType } from "../interfaces/project";
 
-const Home = ({ allProjects }: ProjectType) => {
+type AllProjectsType = {
+  allProjects: Array<ProjectType>;
+};
+
+const Home = ({ allProjects }: AllProjectsType) => {
   return (
     <>
       {/* Hero */}

@@ -1,7 +1,11 @@
-import ProjectType from "../../interfaces/project";
+import { ProjectType } from "../../interfaces/project";
 import { ProjectRow } from "../common";
 
-const ProjectsProjectSection = ({ allProjects }: ProjectType) => {
+type AllProjectsType = {
+  allProjects: Array<ProjectType>;
+};
+
+const ProjectsProjectSection = ({ allProjects }: AllProjectsType) => {
   return (
     <section className="app-container app-section-mt text-app-primary-text">
       <p className="text-center text-button font-bold tracking-[0.125em]">

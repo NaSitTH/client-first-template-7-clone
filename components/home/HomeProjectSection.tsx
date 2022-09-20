@@ -1,8 +1,12 @@
-import ProjectType from "../../interfaces/project";
+import { ProjectType } from "../../interfaces/project";
 import { ProjectRow } from "../common";
 import { TitleSection } from "../common/section";
 
-const HomeProjectSection = ({ allProjects }: ProjectType) => {
+type AllProjectsType = {
+  allProjects: Array<ProjectType>;
+};
+
+const HomeProjectSection = ({ allProjects }: AllProjectsType) => {
   return (
     <section className="app-container app-section-mt" id="projects">
       <TitleSection title="PROJECTS WE HAVE DONE" />

@@ -9,9 +9,13 @@ import {
   EventsSection,
 } from "../../components/common/section";
 import { getAllProjects } from "../../lib/api";
-import ProjectType from "../../interfaces/project";
+import { ProjectType } from "../../interfaces/project";
 
-const Projects = ({ allProjects }: ProjectType) => {
+type AllProjectsType = {
+  allProjects: Array<ProjectType>;
+};
+
+const Projects = ({ allProjects }: AllProjectsType) => {
   return (
     <>
       {/* Header */}

@@ -1,12 +1,8 @@
 import React from "react";
+import { Statistics } from "../../../interfaces/statistics";
 
 type Props = {
-  data: {
-    id: number;
-    value: number;
-    title: string;
-    color: string;
-  };
+  data: Statistics;
 };
 
 const StatsCard = ({ data }: Props) => {

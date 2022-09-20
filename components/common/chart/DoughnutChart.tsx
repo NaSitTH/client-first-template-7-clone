@@ -1,17 +1,11 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import { Statistics } from "../../../interfaces/statistics";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-type Obj = {
-  id: number;
-  value: number;
-  title: string;
-  color: string;
-};
-
 type Props = {
-  data: Array<Obj>;
+  data: Array<Statistics>;
 };
 
 const options = {

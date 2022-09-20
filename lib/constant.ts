@@ -8,16 +8,11 @@ export const navUrl = {
 };
 
 export const footerUrl = {
-  home: "/",
-  aboutUs: "/about-us",
+  ...navUrl,
   team: "/about-us#team",
-  whatWeDo: "/projects",
-  contact: "/contact",
   projects: "/#projects",
   events: "/#events",
-  donate: "/donation",
   blog: "#blog",
-  media: "/media",
   facebook: "https://www.facebook.com/",
   instagram: "https://www.instagram.com/",
   twitter: "https://twitter.com/",

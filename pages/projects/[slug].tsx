@@ -1,11 +1,14 @@
-import { ProjectsContentSection } from "../../components/projects";
-import ProjectsFeaturesSection from "../../components/projects/ProjectsFeaturesSection";
+import { ProjectCard } from "../../components/common/card";
+import {
+  ProjectsContentSection,
+  ProjectsFeaturesSection,
+} from "../../components/projects";
 import { ProjectType } from "../../interfaces/project";
 import { getAllProjects, getBySlug, projectsDirectory } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
 
 type SingleProjectsType = {
-  project: ProjectType;
+  project: ProjectType & { allProjects: Array<ProjectType> };
 };
 
 const ProjectId = ({ project }: SingleProjectsType) => {
@@ -13,6 +16,20 @@ const ProjectId = ({ project }: SingleProjectsType) => {
     <>
       <ProjectsContentSection title={project.title} content={project.content} />
       <ProjectsFeaturesSection />
+
+      <section className="app-container mt-16 grid grid-cols-3 gap-6">
+        {project.allProjects.map((data) => {
+          return (
+            <ProjectCard
+              key={data.title}
+              title={data.title}
+              excerpt={data.excerpt}
+              image={data.coverImage}
+              url={`/projects/${data.slug}`}
+            />
+          );
+        })}
+      </section>
     </>
   );
 };
@@ -33,11 +50,15 @@ export const getStaticProps = async ({ params }: Params) => {
 
   const content = await markdownToHtml(project.content || "");
 
+  const projects = getAllProjects(["title", "excerpt", "coverImage", "slug"]);
+  const allProjects = projects.slice(0, 3);
+
   return {
     props: {
       project: {
         ...project,
         content,
+        allProjects,
       },
     },
   };

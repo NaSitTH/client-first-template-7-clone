@@ -4,7 +4,11 @@ import { ProjectType } from "../../interfaces/project";
 import { getAllProjects, getBySlug, projectsDirectory } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
 
-const ProjectId = ({ project }: ProjectType) => {
+type SingleProjectsType = {
+  project: ProjectType;
+};
+
+const ProjectId = ({ project }: SingleProjectsType) => {
   return (
     <>
       <ProjectsContentSection title={project.title} content={project.content} />

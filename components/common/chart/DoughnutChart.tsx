@@ -3,15 +3,15 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+type Obj = {
+  id: number;
+  value: number;
+  title: string;
+  color: string;
+};
+
 type Props = {
-  data: [
-    {
-      id: number;
-      value: number;
-      title: string;
-      color: string;
-    }
-  ];
+  data: Array<Obj>;
 };
 
 const options = {

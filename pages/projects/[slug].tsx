@@ -17,7 +17,7 @@ const ProjectId = ({ project }: SingleProjectsType) => {
       <ProjectsContentSection title={project.title} content={project.content} />
       <ProjectsFeaturesSection />
 
-      <section className="app-container mt-16 grid grid-cols-3 gap-6">
+      <section className="app-container app-section-mt grid grid-cols-3 gap-6">
         {project.allProjects.map((data) => {
           return (
             <ProjectCard

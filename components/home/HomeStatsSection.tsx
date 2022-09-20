@@ -1,39 +1,6 @@
-import React from "react";
+import { statistics } from "../../lib/constant";
 import { StatsCard } from "../common/card";
 import DoughnutChart from "../common/chart/DoughnutChart";
-
-const statistics = [
-  {
-    id: 1,
-    value: 40,
-    title: "planting trees",
-    color: "bg-app-green-secondary",
-  },
-  {
-    id: 2,
-    value: 35,
-    title: "cleanliness program",
-    color: "bg-app-purple",
-  },
-  {
-    id: 3,
-    value: 10,
-    title: "helping people",
-    color: "bg-app-yellow-secondary",
-  },
-  {
-    id: 4,
-    value: 10,
-    title: "animal safety",
-    color: "bg-app-yellow-primary",
-  },
-  {
-    id: 5,
-    value: 5,
-    title: "feeding the poor",
-    color: "bg-app-pink",
-  },
-];
 
 const HomeStatsSection = () => {
   return (
@@ -47,7 +14,7 @@ const HomeStatsSection = () => {
           </p>
           <div className="grid auto-cols-auto grid-flow-row grid-cols-3 gap-y-4 pt-8">
             {statistics.map((data) => {
-              return <StatsCard key={data.id} data={data} />;
+              return <StatsCard key={data.title} data={data} />;
             })}
           </div>
         </div>

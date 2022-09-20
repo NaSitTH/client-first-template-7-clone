@@ -23,3 +23,31 @@ export const footerUrl = {
   twitter: "https://twitter.com/",
   linkedin: "https://www.linkedin.com/",
 };
+
+export const statistics = [
+  {
+    title: "planting trees",
+    color: "bg-app-green-secondary",
+    value: 40,
+  },
+  {
+    title: "cleanliness program",
+    color: "bg-app-purple",
+    value: 35,
+  },
+  {
+    title: "helping people",
+    color: "bg-app-yellow-secondary",
+    value: 10,
+  },
+  {
+    title: "animal safety",
+    color: "bg-app-yellow-primary",
+    value: 10,
+  },
+  {
+    title: "feeding the poor",
+    color: "bg-app-pink",
+    value: 5,
+  },
+];

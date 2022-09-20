@@ -1,23 +1,15 @@
-import { useRouter } from "next/router";
-import { TitleSection } from "../../components/common/section";
-import { ProjectContent } from "../../components/projects";
+import { ProjectsContentSection } from "../../components/projects";
+import ProjectsFeaturesSection from "../../components/projects/ProjectsFeaturesSection";
+import { ProjectType } from "../../interfaces/project";
 import { getAllProjects, getBySlug, projectsDirectory } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
 
-type Props = {
-  project: {
-    title: string;
-    content: string;
-  };
-};
-
-const ProjectId = ({ project }: Props) => {
-  const router = useRouter();
+const ProjectId = ({ project }: ProjectType) => {
   return (
-    <section className="app-section-mt mx-auto max-w-4xl">
-      <TitleSection title="OUR PROJECT" />
-      <ProjectContent title={project.title} content={project.content} />
-    </section>
+    <>
+      <ProjectsContentSection title={project.title} content={project.content} />
+      <ProjectsFeaturesSection />
+    </>
   );
 };
 export default ProjectId;
@@ -31,7 +23,7 @@ type Params = {
 export const getStaticProps = async ({ params }: Params) => {
   const project = getBySlug(
     params.slug,
-    ["title", "content"],
+    ["title", "excerpt", "coverImage", "slug", "content"],
     projectsDirectory
   );
 

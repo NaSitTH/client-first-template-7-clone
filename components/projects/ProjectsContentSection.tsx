@@ -1,3 +1,5 @@
+import { TitleSection } from "../common/section";
+
 type Props = {
   title: string;
   content: string;
@@ -10,17 +12,16 @@ const proseStyle = {
   img: "prose-img:mt-8 prose-img:h-80 prose-img:w-full prose-img:rounded-xl prose-img:object-cover",
 };
 
-console.log(proseStyle.h2, proseStyle.p);
-
-const ProjectContent = ({ title, content }: Props) => {
+const ProjectContentSection = ({ title, content }: Props) => {
   return (
-    <article>
+    <section className="app-section-mt mx-auto max-w-4xl">
+      <TitleSection title="OUR PROJECT" />
       <h1 className="mt-8 ml-24">{title}</h1>
       <div
         className={`ml-24 mt-8 ${proseStyle.h2} ${proseStyle.p} ${proseStyle.ul} ${proseStyle.img}`}
         dangerouslySetInnerHTML={{ __html: content }}
       />
-    </article>
+    </section>
   );
 };
-export default ProjectContent;
+export default ProjectContentSection;

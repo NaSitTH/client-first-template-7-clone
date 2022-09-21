@@ -54,7 +54,13 @@ const Home = ({ allProjects }: AllProjectsType) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const projects = getAllProjects(["title", "excerpt", "coverImage", "slug"]);
+  const projects = getAllProjects([
+    "title",
+    "excerpt",
+    "coverImage",
+    "slug",
+    "date",
+  ]);
 
   const allProjects = projects.slice(0, 3);
   return {

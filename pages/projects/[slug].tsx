@@ -50,7 +50,13 @@ export const getStaticProps = async ({ params }: Params) => {
 
   const content = await markdownToHtml(project.content || "");
 
-  const projects = getAllProjects(["title", "excerpt", "coverImage", "slug"]);
+  const projects = getAllProjects([
+    "title",
+    "excerpt",
+    "coverImage",
+    "slug",
+    "date",
+  ]);
   const allProjects = projects.slice(0, 3);
 
   return {

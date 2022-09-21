@@ -10,7 +10,7 @@ export function getAllBlogs(fields: string[] = []) {
   const slugs = getBlogSlugs();
   const blogs = slugs
     .map((slug) => getBySlug(slug, fields, blogsDirectory))
-    // sort posts by date in descending order
+    // sort by date in descending order
     .sort((item1, item2) => (item1.date > item2.date ? -1 : 1));
   return blogs;
 }
@@ -19,7 +19,7 @@ export function getAllEvents(fields: string[] = []) {
   const slugs = getEventSlugs();
   const events = slugs
     .map((slug) => getBySlug(slug, fields, eventsDirectory))
-    // sort posts by date in descending order
+    // sort by date in descending order
     .sort((item1, item2) => (item1.date > item2.date ? -1 : 1));
   return events;
 }
@@ -28,7 +28,7 @@ export function getAllProjects(fields: string[] = []) {
   const slugs = getProjectSlugs();
   const projects = slugs
     .map((slug) => getBySlug(slug, fields, projectsDirectory))
-    // sort posts by date in descending order
+    // sort by date in descending order
     .sort((item1, item2) => (item1.date > item2.date ? -1 : 1));
   return projects;
 }

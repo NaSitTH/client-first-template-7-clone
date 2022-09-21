@@ -4,7 +4,7 @@ const ContactMapSection = () => {
   return (
     <section className="app-section-mt block">
       <Image
-        src="/images/map.png"
+        src="/images/Map.png"
         alt="map"
         layout="responsive"
         width={1500}

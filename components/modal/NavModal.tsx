@@ -2,14 +2,14 @@ import Link from "next/link";
 
 import { FaTimes } from "react-icons/fa";
 import { NavLink } from "../layout";
-import { navUrl } from "../../data/Url";
+import { navUrl } from "../../lib/constant";
 
-type AppProps = {
+type Props = {
   handleClick: () => void;
   isOpen: boolean;
 };
 
-const NavModal = ({ handleClick, isOpen }: AppProps) => {
+const NavModal = ({ handleClick, isOpen }: Props) => {
   return (
     <div
       className={`fixed top-0 right-0 z-50 h-screen w-1/2 translate-x-[50vw] ${

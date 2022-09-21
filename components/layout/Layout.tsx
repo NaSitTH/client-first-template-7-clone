@@ -1,9 +1,9 @@
 import React from "react";
 import { Header, Footer } from "./index";
 
-interface Props {
+type Props = {
   children: React.ReactNode;
-}
+};
 
 const Layout = ({ children }: Props) => {
   return (

@@ -2,18 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-type AppProps = {
+type Props = {
   data: {
-    image: string;
-    fullName: string;
-    position: string;
-    facebookUrl: string;
-    twitterUrl: string;
-    linkedinUrl: string;
+    [key: string]: string;
   };
 };
 
-const MemberCard = ({ data }: AppProps) => {
+const MemberCard = ({ data }: Props) => {
   return (
     <div className="flex h-[431px] w-[296px] flex-col items-center">
       <div className="relative h-80 w-full overflow-hidden rounded-lg">

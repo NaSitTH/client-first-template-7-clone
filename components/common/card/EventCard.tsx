@@ -3,13 +3,13 @@ import { BsArrowRight } from "react-icons/bs";
 
 import { format } from "date-fns";
 
-type AppProps = {
+type Props = {
   title: string;
   date: Date;
   url: string;
 };
 
-const EventCard = ({ title, date, url }: AppProps) => {
+const EventCard = ({ title, date, url }: Props) => {
   let month = format(date, "MMM");
   let year = format(date, "yy");
 

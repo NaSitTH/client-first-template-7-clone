@@ -1,16 +1,17 @@
 import { ProjectType } from "../../interfaces/project";
 import { ProjectCard } from "../common/card";
-import { TitleSection } from "../common/section";
 
 type AllProjectsType = {
   allProjects: Array<ProjectType>;
 };
 
-const HomeProjectSection = ({ allProjects }: AllProjectsType) => {
+const ProjectsProjectSection = ({ allProjects }: AllProjectsType) => {
   return (
-    <section className="app-container app-section-mt" id="projects">
-      <TitleSection title="PROJECTS WE HAVE DONE" />
-      <h2 className="mt-8 w-3/5 pl-24 text-app-primary-text">
+    <section className="app-container app-section-mt text-app-primary-text">
+      <p className="text-center text-button font-bold tracking-[0.125em]">
+        PROJECTS WE HAVE DONE
+      </p>
+      <h2 className="mx-auto mt-4 w-4/6 text-center">
         We are Creating sustainable society, for everyone and forever.
       </h2>
       <div className="mt-16 grid grid-cols-3 gap-6">
@@ -29,4 +30,4 @@ const HomeProjectSection = ({ allProjects }: AllProjectsType) => {
     </section>
   );
 };
-export default HomeProjectSection;
+export default ProjectsProjectSection;

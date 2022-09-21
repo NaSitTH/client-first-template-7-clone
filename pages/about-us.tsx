@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import {
   AboutAwardsSection,
   AboutHeaderSection,
@@ -13,7 +12,7 @@ import {
   EventsSection,
 } from "../components/common/section";
 
-const AboutUs: NextPage = () => {
+const AboutUs = () => {
   return (
     <>
       {/* Header */}

@@ -6,11 +6,11 @@ type Props = {
   icon: JSX.Element;
 };
 
-const FunctionCard = ({ title, text, icon }: Props) => {
+const FeaturesCard = ({ title, text, icon }: Props) => {
   return (
-    <IconContext.Provider value={{ className: "text-[#DDFFDF] w-4 h-4" }}>
+    <IconContext.Provider value={{ className: "text-[#716FE7] w-4 h-4" }}>
       <div className="flex space-x-6">
-        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-[#83D187]">
+        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-[#716FE7]/60">
           {icon}
         </div>
         <div>
@@ -24,4 +24,4 @@ const FunctionCard = ({ title, text, icon }: Props) => {
   );
 };
 
-export default FunctionCard;
+export default FeaturesCard;

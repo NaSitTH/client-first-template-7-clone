@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-type AppProps = {
+type Props = {
   url: string;
   title: string;
   isPrimary?: boolean;
 };
 
-const ButtonLink = ({ url, title, isPrimary }: AppProps) => {
+const ButtonLink = ({ url, title, isPrimary }: Props) => {
   return (
     <Link href={url}>
       <a

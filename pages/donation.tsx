@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import {
   DonationHeaderSection,
   DonationHowToSection,
@@ -6,7 +5,7 @@ import {
 } from "../components/donation";
 import { CtaSection } from "../components/common/section";
 
-const donation: NextPage = () => {
+const donation = () => {
   return (
     <>
       {/* Header */}

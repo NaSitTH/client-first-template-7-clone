@@ -1,10 +1,10 @@
 import React from "react";
 
-type AppProps = {
+type Props = {
   title: string;
 };
 
-const TitleSection = ({ title }: AppProps) => {
+const TitleSection = ({ title }: Props) => {
   return (
     <div className="flex items-center space-x-6 text-app-primary-text">
       <span className="flex h-5 items-center">

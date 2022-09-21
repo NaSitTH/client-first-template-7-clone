@@ -1,5 +1,3 @@
-import type { NextPage } from "next";
-
 import {
   HomeAboutSection,
   HomeHeroSection,
@@ -7,10 +5,20 @@ import {
   HomeStatsSection,
   HomeWhatWeDoSection,
 } from "../components/home";
+import {
+  BlogSection,
+  CtaSection,
+  EventsSection,
+  SupportersSection,
+} from "../components/common/section";
+import { getAllProjects } from "../lib/api";
+import { ProjectType } from "../interfaces/project";
 
-import { BlogSection, CtaSection, EventsSection, SupportersSection } from "../components/common/section";
+type AllProjectsType = {
+  allProjects: Array<ProjectType>;
+};
 
-const Home: NextPage = () => {
+const Home = ({ allProjects }: AllProjectsType) => {
   return (
     <>
       {/* Hero */}
@@ -26,7 +34,7 @@ const Home: NextPage = () => {
       <HomeWhatWeDoSection />
 
       {/* Projects */}
-      <HomeProjectSection />
+      <HomeProjectSection allProjects={allProjects} />
 
       {/* Stats */}
       <HomeStatsSection />
@@ -44,3 +52,18 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps = async () => {
+  const projects = getAllProjects([
+    "title",
+    "excerpt",
+    "coverImage",
+    "slug",
+    "date",
+  ]);
+
+  const allProjects = projects.slice(0, 3);
+  return {
+    props: { allProjects },
+  };
+};

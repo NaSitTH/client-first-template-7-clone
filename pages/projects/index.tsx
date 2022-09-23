@@ -1,12 +1,12 @@
 import {
-  ProjectsHeaderSection,
-  ProjectsProjectSection,
-  ProjectsWhatWeDoSection,
-} from "../../components/projects";
+  ProjectHeaderSection,
+  ProjectProjectSection,
+  ProjectWhatWeDoSection,
+} from "../../components/project";
 import {
   BlogSection,
   CtaSection,
-  EventsSection,
+  EventSection,
 } from "../../components/common/section";
 import { getAllProjects } from "../../lib/api";
 import { ProjectType } from "../../interfaces/project";
@@ -19,13 +19,13 @@ const Projects = ({ allProjects }: AllProjectsType) => {
   return (
     <>
       {/* Header */}
-      <ProjectsHeaderSection />
+      <ProjectHeaderSection />
 
       {/* What we do */}
-      <ProjectsWhatWeDoSection />
+      <ProjectWhatWeDoSection />
 
       {/* Project */}
-      <ProjectsProjectSection allProjects={allProjects} />
+      <ProjectProjectSection allProjects={allProjects} />
 
       {/* CTA */}
       <CtaSection />
@@ -34,7 +34,7 @@ const Projects = ({ allProjects }: AllProjectsType) => {
       <BlogSection />
 
       {/* Events */}
-      <EventsSection />
+      <EventSection />
     </>
   );
 };

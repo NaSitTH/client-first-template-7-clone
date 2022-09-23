@@ -5,7 +5,7 @@ type AllProjectsType = {
   allProjects: Array<ProjectType>;
 };
 
-const ProjectsProjectSection = ({ allProjects }: AllProjectsType) => {
+const ProjectProjectSection = ({ allProjects }: AllProjectsType) => {
   return (
     <section className="app-container app-section-mt text-app-primary-text">
       <p className="text-center text-button font-bold tracking-[0.125em]">
@@ -30,4 +30,4 @@ const ProjectsProjectSection = ({ allProjects }: AllProjectsType) => {
     </section>
   );
 };
-export default ProjectsProjectSection;
+export default ProjectProjectSection;

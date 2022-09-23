@@ -17,7 +17,7 @@ const DonationHeaderSection = () => {
               environmental challenges—an investment in the future of our
               planet.
             </p>
-            <ButtonLink url="/" title="Donate now" isPrimary />
+            <ButtonLink url="/contact#form" title="Donate now" isPrimary />
           </div>
         </div>
         <div className="relative h-96 w-3/5 overflow-hidden rounded-xl">

@@ -14,7 +14,8 @@ const ContactFormSection = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
-  const onSubmit = handleSubmit((data) => console.log(data));
+
+  const onSubmit = handleSubmit((data) => alert(JSON.stringify(data)));
 
   return (
     <section className="app-section-mt mx-auto max-w-3xl" id="form">
@@ -98,6 +99,7 @@ const ContactFormSection = () => {
           <button
             className="inline-block h-[51px] rounded bg-app-green-primary px-8 py-4 text-button font-medium text-white
           "
+            type="submit"
           >
             Send message
           </button>

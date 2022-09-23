@@ -1,4 +1,4 @@
-import { SupportersSection } from "../common/section";
+import { SupporterSection } from "../common/section";
 
 const AboutMissionSection = () => {
   return (
@@ -32,7 +32,7 @@ const AboutMissionSection = () => {
         </div>
       </div>
       <div className="py-8">
-        <SupportersSection />
+        <SupporterSection />
       </div>
     </section>
   );

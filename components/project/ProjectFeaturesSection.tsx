@@ -1,7 +1,7 @@
 import { FaCompass, FaDonate, FaImage, FaPen, FaWater } from "react-icons/fa";
 import FeaturesCard from "../common/card/FeaturesCard";
 
-const ProjectsFeaturesSection = () => {
+const ProjectFeaturesSection = () => {
   return (
     <section className="app-section-mt bg-app-off-white py-24">
       <div className="mx-auto grid max-w-5xl grid-cols-2 gap-12">
@@ -29,4 +29,4 @@ const ProjectsFeaturesSection = () => {
     </section>
   );
 };
-export default ProjectsFeaturesSection;
+export default ProjectFeaturesSection;

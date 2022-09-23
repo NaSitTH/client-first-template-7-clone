@@ -7,7 +7,7 @@ import {
   FaWindows,
 } from "react-icons/fa";
 
-const SupportersSection = () => {
+const SupporterSection = () => {
   return (
     <section className="app-container my-16">
       <div className="flex text-app-primary-text">
@@ -47,4 +47,4 @@ const SupportersSection = () => {
     </section>
   );
 };
-export default SupportersSection;
+export default SupporterSection;

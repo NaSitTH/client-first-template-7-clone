@@ -1,7 +1,7 @@
 import { parse } from "date-fns";
 import { EventCard } from "../card";
 
-const EventsSection = () => {
+const EventSection = () => {
   return (
     <section className="app-container app-section-mt">
       <div className="flex items-center">
@@ -27,4 +27,4 @@ const EventsSection = () => {
     </section>
   );
 };
-export default EventsSection;
+export default EventSection;

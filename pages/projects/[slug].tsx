@@ -1,8 +1,8 @@
 import { ProjectCard } from "../../components/common/card";
 import {
-  ProjectsContentSection,
-  ProjectsFeaturesSection,
-} from "../../components/projects";
+  ProjectContentSection,
+  ProjectFeaturesSection,
+} from "../../components/project";
 import { ProjectType } from "../../interfaces/project";
 import { getAllProjects, getBySlug, projectsDirectory } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
@@ -14,8 +14,8 @@ type SingleProjectsType = {
 const ProjectId = ({ project }: SingleProjectsType) => {
   return (
     <>
-      <ProjectsContentSection title={project.title} content={project.content} />
-      <ProjectsFeaturesSection />
+      <ProjectContentSection title={project.title} content={project.content} />
+      <ProjectFeaturesSection />
 
       <section className="app-container app-section-mt grid grid-cols-3 gap-6">
         {project.allProjects.map((data) => {

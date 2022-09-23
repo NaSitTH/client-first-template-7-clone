@@ -12,7 +12,7 @@ Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim 
 
 Consectetur feugiat quis hac enim nullam in enim. Tellus nisi dapibus libero rutrum vitae nisl, cursus in sed. Egestas mi ultricies et consectetur vel non. Augue enim enim, eget ut sit purus, justo nisl pharetra. Tincidunt leo aenean dui, varius metus, vel. Maecenas eu rhoncus, est nunc nisi volutpat, amet venenatis faucibus. Enim, vel nunc purus feugiat purus tincidunt neque. Massa ultricies faucibus pellentesque risus duis est.
 
-![The San Juan Mountains are beautiful!](/images/Image_17.png)
+![City and coconut trees](/images/Image_17.png)
 
 ## Some cool heading
 

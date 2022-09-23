@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { TitleSection } from "../common/section";
 
-const ProjectsHeaderSection = () => {
+const ProjectHeaderSection = () => {
   return (
     <section className="app-container app-section-mt flex ">
       <div className="w-full pr-28">
@@ -26,4 +26,4 @@ const ProjectsHeaderSection = () => {
     </section>
   );
 };
-export default ProjectsHeaderSection;
+export default ProjectHeaderSection;

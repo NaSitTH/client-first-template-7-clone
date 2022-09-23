@@ -9,7 +9,7 @@ import {
 import {
   BlogSection,
   CtaSection,
-  EventsSection,
+  EventSection,
 } from "../components/common/section";
 
 const AboutUs = () => {
@@ -38,7 +38,7 @@ const AboutUs = () => {
       <BlogSection />
 
       {/* Events */}
-      <EventsSection />
+      <EventSection />
     </>
   );
 };

@@ -8,8 +8,8 @@ import {
 import {
   BlogSection,
   CtaSection,
-  EventsSection,
-  SupportersSection,
+  EventSection,
+  SupporterSection,
 } from "../components/common/section";
 import { getAllProjects } from "../lib/api";
 import { ProjectType } from "../interfaces/project";
@@ -28,7 +28,7 @@ const Home = ({ allProjects }: AllProjectsType) => {
       <HomeAboutSection />
 
       {/* Supporters */}
-      <SupportersSection />
+      <SupporterSection />
 
       {/* What we do */}
       <HomeWhatWeDoSection />
@@ -46,7 +46,7 @@ const Home = ({ allProjects }: AllProjectsType) => {
       <BlogSection />
 
       {/* Events */}
-      <EventsSection />
+      <EventSection />
     </>
   );
 };

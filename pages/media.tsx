@@ -1,5 +1,5 @@
 import { MediaBlogSection, MediaHeaderSection } from "../components/media";
-import { EventsSection } from "../components/common/section";
+import { EventSection } from "../components/common/section";
 
 const Media = () => {
   return (
@@ -11,7 +11,7 @@ const Media = () => {
       <MediaBlogSection />
 
       {/* Events */}
-      <EventsSection />
+      <EventSection />
     </>
   );
 };

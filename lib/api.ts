@@ -7,39 +7,35 @@ export const eventsDirectory = join(process.cwd(), "_events");
 export const projectsDirectory = join(process.cwd(), "_projects");
 
 export function getAllBlogs(fields: string[] = []) {
-  const slugs = getBlogSlugs();
+  const slugs = fs.readdirSync(blogsDirectory);
   const blogs = slugs
-    .map((slug) => getBySlug(slug, fields, blogsDirectory))
+    .map((slug) => getBlogBySlug(slug, fields))
     // sort by date in descending order
     .sort((item1, item2) => (item1.date > item2.date ? -1 : 1));
   return blogs;
 }
 
 export function getAllEvents(fields: string[] = []) {
-  const slugs = getEventSlugs();
+  const slugs = fs.readdirSync(eventsDirectory);
   const events = slugs
-    .map((slug) => getBySlug(slug, fields, eventsDirectory))
+    .map((slug) => getEventBySlug(slug, fields))
     // sort by date in descending order
     .sort((item1, item2) => (item1.date > item2.date ? -1 : 1));
   return events;
 }
 
 export function getAllProjects(fields: string[] = []) {
-  const slugs = getProjectSlugs();
+  const slugs = fs.readdirSync(projectsDirectory);
   const projects = slugs
-    .map((slug) => getBySlug(slug, fields, projectsDirectory))
+    .map((slug) => getProjectBySlug(slug, fields))
     // sort by date in descending order
     .sort((item1, item2) => (item1.date > item2.date ? -1 : 1));
   return projects;
 }
 
-export function getBySlug(
-  slug: string,
-  fields: string[] = [],
-  directory: string
-) {
+export function getBlogBySlug(slug: string, fields: string[] = []) {
   const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(directory, `${realSlug}.md`);
+  const fullPath = join(blogsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
@@ -65,14 +61,58 @@ export function getBySlug(
   return items;
 }
 
-export function getBlogSlugs() {
-  return fs.readdirSync(projectsDirectory);
+export function getEventBySlug(slug: string, fields: string[] = []) {
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(eventsDirectory, `${realSlug}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
+
+  type Items = {
+    [key: string]: string;
+  };
+
+  const items: Items = {};
+  // Ensure only the minimal needed data is exposed
+  fields.forEach((field) => {
+    if (field === "slug") {
+      items[field] = realSlug;
+    }
+    if (field === "content") {
+      items[field] = content;
+    }
+
+    if (typeof data[field] !== "undefined") {
+      items[field] = data[field];
+    }
+  });
+
+  return items;
 }
 
-export function getEventSlugs() {
-  return fs.readdirSync(projectsDirectory);
-}
+export function getProjectBySlug(slug: string, fields: string[] = []) {
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(projectsDirectory, `${realSlug}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
 
-export function getProjectSlugs() {
-  return fs.readdirSync(projectsDirectory);
+  type Items = {
+    [key: string]: string;
+  };
+
+  const items: Items = {};
+  // Ensure only the minimal needed data is exposed
+  fields.forEach((field) => {
+    if (field === "slug") {
+      items[field] = realSlug;
+    }
+    if (field === "content") {
+      items[field] = content;
+    }
+
+    if (typeof data[field] !== "undefined") {
+      items[field] = data[field];
+    }
+  });
+
+  return items;
 }

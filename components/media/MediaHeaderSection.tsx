@@ -1,4 +1,4 @@
-import { ButtonLink } from "../common";
+import { ButtonLink } from "../common/button";
 import { BlogCard } from "../common/card";
 import { TitleSection } from "../common/section";
 

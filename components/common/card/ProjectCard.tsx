@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ButtonLink from "../ButtonLink";
+import { ButtonLink } from "../button";
 
 type Props = {
   [key: string]: string;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaPlay } from "react-icons/fa";
-import { ButtonLink } from "../common";
+import { ButtonLink } from "../common/button";
 
 const HomeHeroSection = () => {
   return (

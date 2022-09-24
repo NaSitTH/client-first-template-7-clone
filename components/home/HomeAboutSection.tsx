@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { ButtonLink } from "../common";
+import { ButtonLink } from "../common/button";
 import { TitleSection } from "../common/section";
 
 const HomeAboutSection = () => {

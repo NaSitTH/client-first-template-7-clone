@@ -1,5 +1,5 @@
 ---
-title: "Mission 40K: Tree plantation"
+title: "Don’t destroy greenery and don’t spoil scenery"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim"
 coverImage: "/images/Thumbnail_3.png"
 date: "2022-12-25T08:00:00Z"

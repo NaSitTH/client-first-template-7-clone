@@ -3,12 +3,16 @@ import {
   ProjectContentSection,
   ProjectFeaturesSection,
 } from "../../components/project";
-import { ProjectType } from "../../interfaces/project";
-import { getAllProjects, getBySlug, projectsDirectory } from "../../lib/api";
+import { MarkdownType } from "../../interfaces/markdown";
+import {
+  getAllProjects,
+  getProjectBySlug,
+  projectsDirectory,
+} from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
 
 type SingleProjectsType = {
-  project: ProjectType & { allProjects: Array<ProjectType> };
+  project: MarkdownType & { allProjects: Array<MarkdownType> };
 };
 
 const ProjectId = ({ project }: SingleProjectsType) => {
@@ -42,11 +46,13 @@ type Params = {
 };
 
 export const getStaticProps = async ({ params }: Params) => {
-  const project = getBySlug(
-    params.slug,
-    ["title", "excerpt", "coverImage", "slug", "content"],
-    projectsDirectory
-  );
+  const project = getProjectBySlug(params.slug, [
+    "title",
+    "excerpt",
+    "coverImage",
+    "slug",
+    "content",
+  ]);
 
   const content = await markdownToHtml(project.content || "");
 

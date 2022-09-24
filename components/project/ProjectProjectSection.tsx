@@ -1,8 +1,8 @@
-import { ProjectType } from "../../interfaces/project";
+import { MarkdownType } from "../../interfaces/markdown";
 import { ProjectCard } from "../common/card";
 
 type AllProjectsType = {
-  allProjects: Array<ProjectType>;
+  allProjects: Array<MarkdownType>;
 };
 
 const ProjectProjectSection = ({ allProjects }: AllProjectsType) => {

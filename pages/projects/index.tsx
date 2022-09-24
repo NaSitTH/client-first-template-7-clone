@@ -9,10 +9,10 @@ import {
   EventSection,
 } from "../../components/common/section";
 import { getAllProjects } from "../../lib/api";
-import { ProjectType } from "../../interfaces/project";
+import { MarkdownType } from "../../interfaces/markdown";
 
 type AllProjectsType = {
-  allProjects: Array<ProjectType>;
+  allProjects: Array<MarkdownType>;
 };
 
 const Projects = ({ allProjects }: AllProjectsType) => {

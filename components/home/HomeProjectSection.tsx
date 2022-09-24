@@ -1,12 +1,12 @@
-import { ProjectType } from "../../interfaces/project";
+import { MarkdownType } from "../../interfaces/markdown";
 import { ProjectCard } from "../common/card";
 import { TitleSection } from "../common/section";
 
-type AllProjectsType = {
-  allProjects: Array<ProjectType>;
+type ThreeProjectsType = {
+  threeProjects: Array<MarkdownType>;
 };
 
-const HomeProjectSection = ({ allProjects }: AllProjectsType) => {
+const HomeProjectSection = ({ threeProjects }: ThreeProjectsType) => {
   return (
     <section className="app-container app-section-mt" id="projects">
       <TitleSection title="PROJECTS WE HAVE DONE" />
@@ -14,7 +14,7 @@ const HomeProjectSection = ({ allProjects }: AllProjectsType) => {
         We are Creating sustainable society, for everyone and forever.
       </h2>
       <div className="mt-16 grid grid-cols-3 gap-6">
-        {allProjects.map((data) => {
+        {threeProjects.map((data) => {
           return (
             <ProjectCard
               key={data.title}

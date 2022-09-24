@@ -1,11 +1,11 @@
 import { MarkdownType } from "../../interfaces/markdown";
 import { ProjectCard } from "../common/card";
 
-type AllProjectsType = {
-  allProjects: Array<MarkdownType>;
+type Props = {
+  projects: Array<MarkdownType>;
 };
 
-const ProjectProjectSection = ({ allProjects }: AllProjectsType) => {
+const ProjectProjectSection = ({ projects }: Props) => {
   return (
     <section className="app-container app-section-mt text-app-primary-text">
       <p className="text-center text-button font-bold tracking-[0.125em]">
@@ -15,7 +15,7 @@ const ProjectProjectSection = ({ allProjects }: AllProjectsType) => {
         We are Creating sustainable society, for everyone and forever.
       </h2>
       <div className="mt-16 grid grid-cols-3 gap-6">
-        {allProjects.map((data) => {
+        {projects.map((data) => {
           return (
             <ProjectCard
               key={data.title}

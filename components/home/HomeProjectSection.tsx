@@ -2,11 +2,11 @@ import { MarkdownType } from "../../interfaces/markdown";
 import { ProjectCard } from "../common/card";
 import { TitleSection } from "../common/section";
 
-type ThreeProjectsType = {
-  threeProjects: Array<MarkdownType>;
+type Props = {
+  projects: Array<MarkdownType>;
 };
 
-const HomeProjectSection = ({ threeProjects }: ThreeProjectsType) => {
+const HomeProjectSection = ({ projects }: Props) => {
   return (
     <section className="app-container app-section-mt" id="projects">
       <TitleSection title="PROJECTS WE HAVE DONE" />
@@ -14,7 +14,7 @@ const HomeProjectSection = ({ threeProjects }: ThreeProjectsType) => {
         We are Creating sustainable society, for everyone and forever.
       </h2>
       <div className="mt-16 grid grid-cols-3 gap-6">
-        {threeProjects.map((data) => {
+        {projects.map((data) => {
           return (
             <ProjectCard
               key={data.title}

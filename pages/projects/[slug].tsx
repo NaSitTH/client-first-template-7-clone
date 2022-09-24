@@ -4,21 +4,18 @@ import {
   ProjectFeaturesSection,
 } from "../../components/project";
 import { MarkdownType } from "../../interfaces/markdown";
-import {
-  getAllProjects,
-  getProjectBySlug,
-  projectsDirectory,
-} from "../../lib/api";
+import { getAllProjects, getProjectBySlug } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
 
-type SingleProjectsType = {
+type Props = {
   project: MarkdownType & { allProjects: Array<MarkdownType> };
 };
 
-const ProjectId = ({ project }: SingleProjectsType) => {
+const ProjectId = ({ project }: Props) => {
   return (
     <>
       <ProjectContentSection title={project.title} content={project.content} />
+
       <ProjectFeaturesSection />
 
       <section className="app-container app-section-mt grid grid-cols-3 gap-6">

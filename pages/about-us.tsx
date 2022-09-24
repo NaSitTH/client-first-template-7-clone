@@ -11,8 +11,14 @@ import {
   CtaSection,
   EventSection,
 } from "../components/common/section";
+import { MarkdownType } from "../interfaces/markdown";
+import { getAllBlogs } from "../lib/api";
 
-const AboutUs = () => {
+type Props = {
+  fourBlogs: Array<MarkdownType>;
+};
+
+const AboutUs = ({ fourBlogs }: Props) => {
   return (
     <>
       {/* Header */}
@@ -35,7 +41,7 @@ const AboutUs = () => {
       <CtaSection />
 
       {/* Blogs */}
-      <BlogSection />
+      <BlogSection blogs={fourBlogs} />
 
       {/* Events */}
       <EventSection />
@@ -44,3 +50,14 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
+export const getStaticProps = async () => {
+  const blogs = getAllBlogs(["title", "excerpt", "coverImage", "slug", "date"]);
+  const fourBlogs = blogs.slice(0, 4);
+
+  return {
+    props: {
+      fourBlogs: fourBlogs,
+    },
+  };
+};

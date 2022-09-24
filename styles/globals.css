@@ -56,3 +56,31 @@
 .logo-wrapper {
   @apply flex items-center space-x-2;
 }
+
+.markdown-h {
+  @apply text-app-primary-text prose-headings:mt-12;
+}
+
+.markdown-p {
+  @apply prose-p:mt-4 prose-p:text-app-secondary-text;
+}
+
+.markdown-a {
+  @apply prose-a:text-sky-500;
+}
+
+.markdown-ol {
+  @apply prose-ol:ml-8 prose-ol:mt-4 prose-ol:list-decimal prose-ol:text-paragraph prose-ol:text-app-secondary-text;
+}
+
+.markdown-ul {
+  @apply prose-ul:ml-8 prose-ul:mt-4 prose-ul:list-disc prose-ul:text-paragraph prose-ul:text-app-secondary-text;
+}
+
+.markdown-img {
+  @apply prose-img:mt-8 prose-img:h-80 prose-img:w-full prose-img:rounded-xl prose-img:object-cover;
+}
+
+.markdown-content {
+  @apply markdown-h markdown-p markdown-a markdown-ol markdown-ul markdown-img;
+}

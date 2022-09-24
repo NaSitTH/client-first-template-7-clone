@@ -8,14 +8,15 @@ import {
   CtaSection,
   EventSection,
 } from "../../components/common/section";
-import { getAllProjects } from "../../lib/api";
+import { getAllBlogs, getAllProjects } from "../../lib/api";
 import { MarkdownType } from "../../interfaces/markdown";
 
-type AllProjectsType = {
-  allProjects: Array<MarkdownType>;
+type Props = {
+  threeProjects: Array<MarkdownType>;
+  fourBlogs: Array<MarkdownType>;
 };
 
-const Projects = ({ allProjects }: AllProjectsType) => {
+const Projects = ({ threeProjects, fourBlogs }: Props) => {
   return (
     <>
       {/* Header */}
@@ -25,13 +26,13 @@ const Projects = ({ allProjects }: AllProjectsType) => {
       <ProjectWhatWeDoSection />
 
       {/* Project */}
-      <ProjectProjectSection allProjects={allProjects} />
+      <ProjectProjectSection projects={threeProjects} />
 
       {/* CTA */}
       <CtaSection />
 
       {/* Blogs */}
-      <BlogSection />
+      <BlogSection blogs={fourBlogs} />
 
       {/* Events */}
       <EventSection />
@@ -49,8 +50,15 @@ export const getStaticProps = async () => {
     "date",
   ]);
 
-  const allProjects = projects.slice(0, 3);
+  const threeProjects = projects.slice(0, 3);
+
+  const blogs = getAllBlogs(["title", "excerpt", "coverImage", "slug", "date"]);
+  const fourBlogs = blogs.slice(0, 4);
+
   return {
-    props: { allProjects },
+    props: {
+      threeProjects: threeProjects,
+      fourBlogs: fourBlogs,
+    },
   };
 };

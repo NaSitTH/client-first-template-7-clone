@@ -18,7 +18,7 @@ const ProjectContentSection = ({ title, content }: Props) => {
       <TitleSection title="OUR PROJECT" />
       <h1 className="mt-8 ml-24">{title}</h1>
       <div
-        className={`ml-24 mt-8 ${proseStyle.h2} ${proseStyle.p} ${proseStyle.ul} ${proseStyle.img}`}
+        className="markdown-content ml-24 mt-8"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </section>

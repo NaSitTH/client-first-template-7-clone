@@ -12,7 +12,7 @@ type Props = {
 
 const BlogCard = ({ title, excerpt, image, url, isRow }: Props) => {
   return (
-    <Link href={url}>
+    <Link href={`/blogs/${url}`}>
       <a
         className={`group flex cursor-pointer ${
           isRow ? "flex-row items-center space-x-6" : "flex-col"

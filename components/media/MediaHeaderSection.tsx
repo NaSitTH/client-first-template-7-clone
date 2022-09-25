@@ -22,7 +22,7 @@ const MediaHeaderSection = ({ blogs }: Props) => {
               Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
               Nunc ut sem vitae risus tristique posuere.
             </p>
-            <ButtonLink url="/" title="Read More" isPrimary />
+            <ButtonLink url="#recent-news" title="Read More" isPrimary />
           </div>
         </div>
         <div className="flex w-full flex-col space-y-6 rounded-xl bg-white py-6 pl-6 pr-14">

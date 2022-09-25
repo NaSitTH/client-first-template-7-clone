@@ -7,7 +7,7 @@ type Props = {
 
 const MediaBlogSection = ({ blogs }: Props) => {
   return (
-    <section className="app-container app-section-mt">
+    <section className="app-container app-section-mt" id="recent-news">
       <h2 className="text-center text-app-primary-text">
         Read our Recent News
       </h2>
@@ -15,7 +15,7 @@ const MediaBlogSection = ({ blogs }: Props) => {
         Edit this text to make it your own. To edit, simply click directly on
         the text to start We are served
       </p>
-      <div className="flex h-[360px] w-full justify-between space-x-6">
+      <div className="mt-12 flex h-[360px] w-full justify-between space-x-6">
         {blogs.map((data) => {
           return (
             <BlogCard

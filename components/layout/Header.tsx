@@ -1,30 +1,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
-
 import NavLink from "./NavLink";
 import { FaBars } from "react-icons/fa";
 import { Backdrop, NavModal } from "../modal";
 import { navUrl } from "../../lib/constant";
 import { useRouter } from "next/router";
+import { useScrollPosition } from "../../hooks";
 
 const Header = () => {
   const [navIsOpen, setNavOpen] = useState(false);
+  const scrollPos = useScrollPosition();
   const router = useRouter();
   const path = router.asPath;
-
-  let bg: string = "bg-white";
-
-  if (
-    path.includes("/media") ||
-    path.includes("/donation") ||
-    path.includes("/event")
-  ) {
-    bg = "bg-app-green-tertiary";
-  } else if (path.includes("/contact")) {
-    bg = "bg-app-off-white";
-  } else {
-    bg = "bg-white";
-  }
 
   const toggleNavHandler = () => {
     setNavOpen(!navIsOpen);
@@ -34,9 +21,24 @@ const Header = () => {
     setNavOpen(false);
   };
 
+  let bg: string = "bg-white";
+
+  if (
+    path.includes("/media") ||
+    path.includes("/donation") ||
+    path.includes("/event")
+  )
+    bg = "bg-app-green-tertiary";
+  else if (path.includes("/contact")) bg = "bg-app-off-white";
+  else bg = "bg-white";
+
   return (
-    <header className={`w-screen ${bg} `}>
-      <nav className="app-container z-30 flex h-[67px] items-center justify-between">
+    <header
+      className={`sticky top-0 z-30 w-screen ${bg} ${
+        scrollPos >= 100 && !navIsOpen ? "opacity-90 shadow-md" : ""
+      }`}
+    >
+      <nav className="app-container flex h-[67px] items-center justify-between">
         <Link href={navUrl.home}>
           <a className="flex h-full items-center">
             <h4>Logo</h4>

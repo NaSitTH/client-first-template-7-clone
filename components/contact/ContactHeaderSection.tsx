@@ -32,7 +32,7 @@ const ContactHeaderSection = () => {
           <p className="mt-2 text-app-secondary-text">
             178 Marconi St., Venice, 34293 Italy
           </p>
-          <div className="mt-8 flex space-x-5 opacity-80">
+          <div className="mt-8 flex space-x-5 opacity-80" id="form">
             <Link href="https://www.facebook.com/">
               <a target="_blank">
                 <FaFacebook className="h-5 w-5" />

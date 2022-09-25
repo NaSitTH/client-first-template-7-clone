@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { FaRegCheckCircle, FaTimes } from "react-icons/fa";
 
 type FormData = {
   firstName: string;
@@ -9,16 +11,50 @@ type FormData = {
 };
 
 const ContactFormSection = () => {
+  const [isSuccess, setSuccess] = useState(false);
+
+  useEffect(() => {
+    let timer = setTimeout(() => closeSuccessHandler(), 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isSuccess]);
+
+  const toggleShowHandler = () => {
+    setSuccess(!isSuccess);
+  };
+
+  const closeSuccessHandler = () => {
+    setSuccess(false);
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = handleSubmit((data) => alert(JSON.stringify(data)));
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+    return toggleShowHandler();
+  });
 
   return (
-    <section className="app-section-mt mx-auto max-w-3xl" id="form">
+    <section className="app-section-mt mx-auto max-w-3xl">
+      <div
+        className={`fixed bottom-0 right-10 z-30 flex justify-center ${
+          isSuccess ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+        } duration-500 ease-in-out`}
+      >
+        <div className="mx-auto mb-12 flex h-12 items-center space-x-5 rounded-lg border-[1px] border-app-green-primary bg-app-green-secondary bg-opacity-40 px-4 text-green-600">
+          <FaRegCheckCircle className="h-8 w-8 text-app-green-primary" />
+          <p className="font-semibold tracking-widest">SEND SUCCESS!</p>
+          <button onClick={closeSuccessHandler}>
+            <FaTimes className="h-5 w-5 text-app-green-primary" />
+          </button>
+        </div>
+      </div>
       <form
         className="flex flex-col space-y-8 text-paragraph text-app-primary-text"
         onSubmit={onSubmit}
@@ -92,7 +128,7 @@ const ContactFormSection = () => {
           <textarea
             className="mt-2 h-40 w-full resize-none rounded border-[1px] border-app-border p-5 outline-none placeholder:text-paragraph placeholder:opacity-30"
             placeholder="Type your Messege"
-            {...register("message", { minLength: 5, maxLength: 100 })}
+            {...register("message", { minLength: 0, maxLength: 100 })}
           />
         </div>
         <div className="flex w-full justify-center">

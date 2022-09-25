@@ -6,12 +6,14 @@ import { Backdrop, NavModal } from "../modal";
 import { navUrl } from "../../lib/constant";
 import { useRouter } from "next/router";
 import { useScrollPosition } from "../../hooks";
+import { getBgColorByPath } from "../../lib/helper";
 
 const Header = () => {
   const [navIsOpen, setNavOpen] = useState(false);
   const scrollPos = useScrollPosition();
   const router = useRouter();
-  const path = router.asPath;
+
+  let bgColor = getBgColorByPath(router.asPath);
 
   const toggleNavHandler = () => {
     setNavOpen(!navIsOpen);
@@ -21,24 +23,13 @@ const Header = () => {
     setNavOpen(false);
   };
 
-  let bg: string = "bg-white";
-
-  if (
-    path.includes("/media") ||
-    path.includes("/donation") ||
-    path.includes("/event")
-  )
-    bg = "bg-app-green-tertiary";
-  else if (path.includes("/contact")) bg = "bg-app-off-white";
-  else bg = "bg-white";
-
   return (
     <header
-      className={`sticky top-0 z-30 w-screen ${bg} ${
-        scrollPos >= 100 && !navIsOpen ? "opacity-90 shadow-md" : ""
+      className={`sticky top-0 z-30 w-screen ${bgColor} ${
+        scrollPos >= 100 && !navIsOpen ? "bg-white opacity-90 shadow-md" : ""
       }`}
     >
-      <nav className="app-container flex h-[67px] items-center justify-between">
+      <nav className="app-container flex h-[68px] items-center justify-between">
         <Link href={navUrl.home}>
           <a className="flex h-full items-center">
             <h4>Logo</h4>
@@ -69,8 +60,8 @@ const Header = () => {
         <button className="hidden md:block" onClick={toggleNavHandler}>
           <FaBars className="h-6 w-6 text-app-primary-text" />
         </button>
-        <NavModal handleClick={closeNavHandler} isOpen={navIsOpen} />
-        {navIsOpen && <Backdrop handleClick={closeNavHandler} />}
+        <NavModal handleClose={closeNavHandler} isOpen={navIsOpen} />
+        {navIsOpen && <Backdrop handleClose={closeNavHandler} />}
       </nav>
     </header>
   );

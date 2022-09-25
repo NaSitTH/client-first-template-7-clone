@@ -78,7 +78,7 @@
 }
 
 .markdown-img {
-  @apply prose-img:mt-8 prose-img:h-80 prose-img:w-full prose-img:rounded-xl prose-img:object-cover;
+  @apply prose-img:my-8 prose-img:h-80 prose-img:w-full prose-img:rounded-xl prose-img:object-cover;
 }
 
 .markdown-content {

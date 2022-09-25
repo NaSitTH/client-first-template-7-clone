@@ -6,4 +6,5 @@ export type MarkdownType = {
   slug: string;
   content: string;
   date: string;
+  location: string;
 };

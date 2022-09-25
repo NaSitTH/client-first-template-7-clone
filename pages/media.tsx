@@ -1,13 +1,13 @@
 import { MediaBlogSection, MediaHeaderSection } from "../components/media";
 import { EventSection } from "../components/common/section";
-import { getAllBlogs } from "../lib/api";
+import { getAllBlogs, getAllEvents } from "../lib/api";
 import { MarkdownType } from "../interfaces/markdown";
 
 type Props = {
-  fourBlogs: Array<MarkdownType>;
+  [key: string]: Array<MarkdownType>;
 };
 
-const Media = ({ fourBlogs }: Props) => {
+const Media = ({ fourBlogs, twoEvents }: Props) => {
   const threeBlogs = fourBlogs.slice(0, 3);
   return (
     <>
@@ -18,7 +18,7 @@ const Media = ({ fourBlogs }: Props) => {
       <MediaBlogSection blogs={fourBlogs} />
 
       {/* Events */}
-      <EventSection />
+      <EventSection events={twoEvents} />
     </>
   );
 };
@@ -28,9 +28,13 @@ export const getStaticProps = async () => {
   const blogs = getAllBlogs(["title", "excerpt", "coverImage", "slug", "date"]);
   const fourBlogs = blogs.slice(0, 4);
 
+  const events = getAllEvents(["title", "date", "slug"]);
+  const twoEvents = events.slice(0, 2);
+
   return {
     props: {
       fourBlogs: fourBlogs,
+      twoEvents: twoEvents,
     },
   };
 };

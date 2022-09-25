@@ -1,12 +1,12 @@
 type Props = {
-  handleClick: () => void;
+  handleClose: () => void;
 };
 
-const Backdrop = ({ handleClick }: Props) => {
+const Backdrop = ({ handleClose }: Props) => {
   return (
     <div
       className="fixed top-0 left-0 z-40 h-screen w-full bg-black/30"
-      onClick={handleClick}
+      onClick={handleClose}
     />
   );
 };

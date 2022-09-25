@@ -5,11 +5,11 @@ import { NavLink } from "../layout";
 import { navUrl } from "../../lib/constant";
 
 type Props = {
-  handleClick: () => void;
+  handleClose: () => void;
   isOpen: boolean;
 };
 
-const NavModal = ({ handleClick, isOpen }: Props) => {
+const NavModal = ({ handleClose, isOpen }: Props) => {
   return (
     <div
       className={`fixed top-0 right-0 z-50 h-screen w-1/2 translate-x-[50vw] ${
@@ -17,12 +17,15 @@ const NavModal = ({ handleClick, isOpen }: Props) => {
       } bg-white duration-300 ease-in-out`}
     >
       <div className="mx-auto flex h-[67px] w-14/20 items-center justify-end">
-        <button className="" onClick={handleClick}>
+        <button className="" onClick={handleClose}>
           <FaTimes className="h-7 w-7 text-app-primary-text" />
         </button>
       </div>
 
-      <ul className="mx-auto flex w-14/20 flex-col space-y-5 font-medium leading-[1.1875rem]">
+      <ul
+        className="mx-auto flex w-14/20 flex-col space-y-5 font-medium leading-[1.1875rem]"
+        onClick={handleClose}
+      >
         <li>
           <NavLink url="/" title="Home" />
         </li>

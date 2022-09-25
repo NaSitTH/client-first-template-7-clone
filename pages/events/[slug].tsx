@@ -4,7 +4,7 @@ import {
   EventHeaderSection,
 } from "../../components/event";
 import { MarkdownType } from "../../interfaces/markdown";
-import { getAllEvents, getEventBySlug } from "../../lib/api";
+import { getAllEvents, getEventBySlug, getTwoEvents } from "../../lib/api";
 import { markdownToHtml } from "../../lib/markdownToHtml";
 
 type Props = {
@@ -66,8 +66,7 @@ export const getStaticProps = async ({ params }: Params) => {
 
   const content = await markdownToHtml(event.content || "");
 
-  const events = getAllEvents(["title", "date", "slug"]);
-  const twoEvents = events.slice(0, 2);
+  const twoEvents = getTwoEvents();
 
   return {
     props: {

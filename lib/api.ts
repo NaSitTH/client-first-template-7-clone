@@ -116,3 +116,27 @@ export function getProjectBySlug(slug: string, fields: string[] = []) {
 
   return items;
 }
+
+export function getFourBlogs() {
+  const blogs = getAllBlogs(["title", "excerpt", "coverImage", "slug", "date"]);
+  const fourBlogs = blogs.slice(0, 4);
+  return fourBlogs;
+}
+
+export function getTwoEvents() {
+  const events = getAllEvents(["title", "date", "slug"]);
+  const twoEvents = events.slice(0, 2);
+  return twoEvents;
+}
+
+export function getThreeProjects() {
+  const projects = getAllProjects([
+    "title",
+    "excerpt",
+    "coverImage",
+    "slug",
+    "date",
+  ]);
+  const threeProjects = projects.slice(0, 3);
+  return threeProjects;
+}

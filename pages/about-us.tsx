@@ -12,7 +12,7 @@ import {
   EventSection,
 } from "../components/common/section";
 import { MarkdownType } from "../interfaces/markdown";
-import { getAllBlogs, getAllEvents } from "../lib/api";
+import { getFourBlogs, getTwoEvents } from "../lib/api";
 
 type Props = {
   [key: string]: Array<MarkdownType>;
@@ -52,11 +52,8 @@ const AboutUs = ({ fourBlogs, twoEvents }: Props) => {
 export default AboutUs;
 
 export const getStaticProps = async () => {
-  const blogs = getAllBlogs(["title", "excerpt", "coverImage", "slug", "date"]);
-  const fourBlogs = blogs.slice(0, 4);
-
-  const events = getAllEvents(["title", "date", "slug"]);
-  const twoEvents = events.slice(0, 2);
+  const fourBlogs = getFourBlogs();
+  const twoEvents = getTwoEvents();
 
   return {
     props: {

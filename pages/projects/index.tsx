@@ -8,7 +8,7 @@ import {
   CtaSection,
   EventSection,
 } from "../../components/common/section";
-import { getAllBlogs, getAllEvents, getAllProjects } from "../../lib/api";
+import { getFourBlogs, getThreeProjects, getTwoEvents } from "../../lib/api";
 import { MarkdownType } from "../../interfaces/markdown";
 
 type Props = {
@@ -43,21 +43,9 @@ const Projects = ({ threeProjects, fourBlogs, twoEvents }: Props) => {
 export default Projects;
 
 export const getStaticProps = async () => {
-  const projects = getAllProjects([
-    "title",
-    "excerpt",
-    "coverImage",
-    "slug",
-    "date",
-  ]);
-
-  const threeProjects = projects.slice(0, 3);
-
-  const blogs = getAllBlogs(["title", "excerpt", "coverImage", "slug", "date"]);
-  const fourBlogs = blogs.slice(0, 4);
-
-  const events = getAllEvents(["title", "date", "slug"]);
-  const twoEvents = events.slice(0, 2);
+  const threeProjects = getThreeProjects();
+  const fourBlogs = getFourBlogs();
+  const twoEvents = getTwoEvents();
 
   return {
     props: {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ButtonLink } from "../common";
+import { ButtonLink } from "../common/button";
 import { TitleSection } from "../common/section";
 
 const DonationHeaderSection = () => {

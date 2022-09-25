@@ -4,7 +4,7 @@ import { ButtonLink } from "../common/button";
 
 const HomeHeroSection = () => {
   return (
-    <section className="relative h-[calc(100vh-67px)]">
+    <section className="relative h-[calc(100vh-68px)]">
       <div className="relative h-full w-screen">
         <Image
           src="/images/BG_1.png"

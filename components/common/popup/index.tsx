@@ -1,1 +1,1 @@
-export { default as NotificationPopup } from "./NotificationPopup";
+export { default as SuccessPopup } from "./SuccessPopup";

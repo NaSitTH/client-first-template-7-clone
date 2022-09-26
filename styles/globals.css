@@ -84,3 +84,11 @@
 .markdown-content {
   @apply markdown-h markdown-p markdown-a markdown-ol markdown-ul markdown-img;
 }
+
+.form-input {
+  @apply mt-2 border-b-[1px] border-app-border py-1 text-paragraph text-app-primary-text outline-none;
+}
+
+.form-label {
+  @apply text-xs font-bold leading-[1.2rem] opacity-60;
+}

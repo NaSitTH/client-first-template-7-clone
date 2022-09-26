@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { NotificationPopup } from "../common/popup";
+import { SuccessPopup } from "../common/popup";
 
 type FormData = {
   firstName: string;
@@ -15,7 +15,6 @@ const ContactFormSection = () => {
 
   useEffect(() => {
     let timer = setTimeout(() => closeSuccessHandler(), 3000);
-
     return () => {
       clearTimeout(timer);
     };
@@ -48,11 +47,9 @@ const ContactFormSection = () => {
       >
         <div className="flex space-x-8">
           <div className="flex w-full flex-col">
-            <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-              First Name
-            </label>
+            <label className="form-label">First Name</label>
             <input
-              className="mt-2 border-b-[1px] border-app-border outline-none"
+              className="form-input"
               {...register("firstName", { required: true })}
             />
             {errors.firstName?.type === "required" && (
@@ -62,11 +59,9 @@ const ContactFormSection = () => {
             )}
           </div>
           <div className="flex w-full flex-col">
-            <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-              Last Name
-            </label>
+            <label className="form-label">Last Name</label>
             <input
-              className="mt-2 border-b-[1px] border-app-border outline-none"
+              className="form-input"
               {...register("lastName", { required: true })}
             />
             {errors.lastName?.type === "required" && (
@@ -79,11 +74,9 @@ const ContactFormSection = () => {
 
         <div className="flex space-x-8">
           <div className="flex w-full flex-col">
-            <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-              Email Id
-            </label>
+            <label className="form-label">Email Id</label>
             <input
-              className="mt-2 border-b-[1px] border-app-border outline-none"
+              className="form-input"
               type="email"
               {...register("mail", { required: true })}
             />
@@ -94,11 +87,9 @@ const ContactFormSection = () => {
             )}
           </div>
           <div className="flex w-full flex-col">
-            <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-              Supject
-            </label>
+            <label className="form-label">Supject</label>
             <input
-              className="mt-2 border-b-[1px] border-app-border outline-none"
+              className="form-input"
               {...register("subject", { required: true })}
             />
             {errors.subject?.type === "required" && (
@@ -109,9 +100,7 @@ const ContactFormSection = () => {
           </div>
         </div>
         <div>
-          <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-            Message
-          </label>
+          <label className="form-label">Message</label>
           <textarea
             className="mt-2 h-40 w-full resize-none rounded border-[1px] border-app-border p-5 outline-none placeholder:text-paragraph placeholder:opacity-30"
             placeholder="Type your Messege"
@@ -128,10 +117,7 @@ const ContactFormSection = () => {
           </button>
         </div>
       </form>
-      <NotificationPopup
-        isDisplay={isSuccess}
-        closeHandler={closeSuccessHandler}
-      />
+      <SuccessPopup isDisplay={isSuccess} handleClose={closeSuccessHandler} />
     </section>
   );
 };

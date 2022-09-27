@@ -10,7 +10,7 @@ type Props = {
 
 const MemberCard = ({ data }: Props) => {
   return (
-    <div className="flex h-[431px] w-[296px] flex-col items-center">
+    <div className="flex h-[431px] w-[296px] flex-col items-center 2xl:h-80 2xl:w-full">
       <div className="relative h-80 w-full overflow-hidden rounded-lg">
         <Image
           src={data.image}

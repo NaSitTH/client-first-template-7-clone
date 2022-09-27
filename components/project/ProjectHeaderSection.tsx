@@ -4,7 +4,7 @@ import { TitleSection } from "../common/section";
 const ProjectHeaderSection = () => {
   return (
     <section className="app-container app-section-mt flex ">
-      <div className="w-full pr-28">
+      <div className="w-full pr-28 xl:pr-12">
         <TitleSection title="WHAT WE DO" />
         <h1 className="mt-8 ml-24 text-app-primary-text">
           We are working worldwide

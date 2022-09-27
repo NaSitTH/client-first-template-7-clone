@@ -16,7 +16,7 @@ const EventSection = ({ events }: Props) => {
           <span className="h-[1px] w-full bg-app-border"></span>
         </span>
       </div>
-      <div className="mt-12 flex flex-row-reverse space-x-6 space-x-reverse">
+      <div className="mt-12 flex flex-row-reverse space-x-6 space-x-reverse xl:flex-col-reverse xl:space-y-6 xl:space-y-reverse">
         {events.map((data) => {
           return (
             <EventCard

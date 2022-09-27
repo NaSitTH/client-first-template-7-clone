@@ -18,11 +18,15 @@ const BlogCard = ({ title, excerpt, image, url, isRow }: Props) => {
           isRow ? "flex-row items-center space-x-6" : "flex-col"
         }`}
       >
-        <div className="relative h-[192px] w-full overflow-hidden rounded-lg transition group-hover:scale-105">
+        <div
+          className={`relative h-[192px] w-full ${
+            isRow ? "shrink" : "shrink-0"
+          } overflow-hidden rounded-lg transition group-hover:scale-[.97]`}
+        >
           <Image src={image} alt={title} layout="fill" objectFit="cover" />
         </div>
-        <div className={isRow ? "mt-0" : "mt-4"}>
-          <p className="w-full text-xl font-medium leading-[1.875rem] text-[#1C1D28]">
+        <div className={isRow ? "mt-0 " : "mt-4"}>
+          <p className="w-full text-xl font-medium leading-[1.875rem] text-[#1C1D28] line-clamp-2 hover:line-clamp-none">
             {title}
           </p>
           <p className="mt-2 text-app-secondary-text line-clamp-3 group-hover:line-clamp-none">

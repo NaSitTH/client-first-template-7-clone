@@ -13,7 +13,7 @@ const ProjectWhatWeDoSection = () => {
     <section className="app-section-mt bg-app-green-tertiary py-24">
       <div className="app-container">
         <h2>What we do for the environment</h2>
-        <div className="mt-16 grid grid-cols-3 gap-y-12 gap-x-16">
+        <div className="mt-16 grid grid-cols-3 gap-y-12 gap-x-16 xl:gap-x-8">
           <FunctionCard
             title="Build Healthy Cities"
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."

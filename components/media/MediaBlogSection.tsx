@@ -11,7 +11,7 @@ const MediaBlogSection = ({ blogs }: Props) => {
       <h2 className="text-center text-app-primary-text">
         Read our Recent News
       </h2>
-      <p className="mx-auto mt-4 w-2/5 text-center text-app-secondary-text">
+      <p className="mx-auto mt-4 w-2/5 text-center text-app-secondary-text xl:w-4/5">
         Edit this text to make it your own. To edit, simply click directly on
         the text to start We are served
       </p>

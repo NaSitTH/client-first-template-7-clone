@@ -11,7 +11,7 @@ const MediaHeaderSection = ({ blogs }: Props) => {
   const threeBlogs = blogs.slice(0, 3);
   return (
     <section className="w-screen bg-app-green-tertiary py-24">
-      <div className="app-container flex space-x-24">
+      <div className="app-container flex space-x-24 2xl:space-x-12">
         <div className="w-full">
           <TitleSection title="TOP NEWS" />
           <div className="mt-8 ml-24">
@@ -25,7 +25,7 @@ const MediaHeaderSection = ({ blogs }: Props) => {
             <ButtonLink url="#recent-news" title="Read More" isPrimary />
           </div>
         </div>
-        <div className="flex w-full flex-col space-y-6 rounded-xl bg-white py-6 pl-6 pr-14">
+        <div className="flex w-full flex-col space-y-6 rounded-xl bg-white py-6 pl-6 pr-14 xl:hidden">
           {blogs.map((data) => {
             return (
               <BlogCard

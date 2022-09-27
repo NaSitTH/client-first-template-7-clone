@@ -4,7 +4,7 @@ import FeaturesCard from "../common/card/FeaturesCard";
 const ProjectFeaturesSection = () => {
   return (
     <section className="app-section-mt bg-app-off-white py-24">
-      <div className="mx-auto grid max-w-5xl grid-cols-2 gap-12">
+      <div className="mx-auto grid max-w-5xl grid-cols-2 gap-12 xl:w-17/20">
         <FeaturesCard
           title="200+ Plantation in 1 week"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."

@@ -11,7 +11,7 @@ const ProjectProjectSection = ({ projects }: Props) => {
       <p className="text-center text-button font-bold tracking-[0.125em]">
         PROJECTS WE HAVE DONE
       </p>
-      <h2 className="mx-auto mt-4 w-4/6 text-center">
+      <h2 className="mx-auto mt-4 w-4/6 text-center 2xl:w-4/5 xl:w-full">
         We are Creating sustainable society, for everyone and forever.
       </h2>
       <div className="mt-16 grid grid-cols-3 gap-6">

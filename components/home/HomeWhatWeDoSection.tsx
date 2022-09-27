@@ -7,7 +7,7 @@ import { TitleSection } from "../common/section";
 const HomeWhatWeDoSection = () => {
   return (
     <section className="w-screen bg-app-green-tertiary py-24" id="what-we-do">
-      <div className="app-container flex items-center">
+      <div className="app-container flex items-center xl:flex-col xl:space-y-12">
         <div className="w-full">
           <TitleSection title="WHAT WE DO" />
           <div className="mx-24 mt-8 text-app-primary-text 2xl:mr-12">
@@ -40,7 +40,7 @@ const HomeWhatWeDoSection = () => {
             </div>
           </div>
         </div>
-        <div className="relative h-[658px] w-3/5 overflow-hidden rounded-xl 2xl:h-[680px]">
+        <div className="relative h-[658px] w-3/5 overflow-hidden rounded-xl 2xl:h-[680px] xl:h-80 xl:w-full">
           <Image
             src="/images/Image_5.png"
             alt="man playing with dog"

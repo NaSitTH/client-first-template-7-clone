@@ -4,7 +4,7 @@ import DoughnutChart from "../common/chart/DoughnutChart";
 
 const HomeStatsSection = () => {
   return (
-    <section className="app-section-mt h-[576px] w-screen bg-app-black py-24">
+    <section className="app-section-mt w-screen bg-app-black py-24">
       <div className="app-container flex items-center">
         <div className="w-full text-white">
           <h2>How we spend your donations and where it goes</h2>
@@ -18,8 +18,8 @@ const HomeStatsSection = () => {
             })}
           </div>
         </div>
-        <div className="flex w-5/6 justify-end">
-          <div className="relative flex h-[375px] w-[375px] items-center justify-center">
+        <div className="flex w-5/6 justify-end 2xl:w-3/5">
+          <div className="relative flex h-[375px] w-[375px] items-center justify-center 2xl:h-80 2xl:w-80">
             <DoughnutChart data={statistics} />
             <h3 className="absolute text-white">LOGO</h3>
           </div>

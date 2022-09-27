@@ -1,20 +1,20 @@
-import { ProjectType } from "../../interfaces/project";
+import { MarkdownType } from "../../interfaces/markdown";
 import { ProjectCard } from "../common/card";
 import { TitleSection } from "../common/section";
 
-type AllProjectsType = {
-  allProjects: Array<ProjectType>;
+type Props = {
+  projects: Array<MarkdownType>;
 };
 
-const HomeProjectSection = ({ allProjects }: AllProjectsType) => {
+const HomeProjectSection = ({ projects }: Props) => {
   return (
     <section className="app-container app-section-mt" id="projects">
       <TitleSection title="PROJECTS WE HAVE DONE" />
-      <h2 className="mt-8 w-3/5 pl-24 text-app-primary-text">
+      <h2 className="mt-8 w-3/5 pl-24 text-app-primary-text 2xl:w-14/20 xl:w-full">
         We are Creating sustainable society, for everyone and forever.
       </h2>
       <div className="mt-16 grid grid-cols-3 gap-6">
-        {allProjects.map((data) => {
+        {projects.map((data) => {
           return (
             <ProjectCard
               key={data.title}

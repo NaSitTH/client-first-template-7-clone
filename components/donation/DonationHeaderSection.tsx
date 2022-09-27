@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ButtonLink } from "../common";
+import { ButtonLink } from "../common/button";
 import { TitleSection } from "../common/section";
 
 const DonationHeaderSection = () => {
@@ -8,7 +8,7 @@ const DonationHeaderSection = () => {
       <div className="app-container flex">
         <div className="w-full">
           <TitleSection title="DONATE" />
-          <div className="mx-24">
+          <div className="mx-24 2xl:mr-12">
             <h1 className="mt-8 text-app-primary-text">
               Making a donation for Nature.
             </h1>

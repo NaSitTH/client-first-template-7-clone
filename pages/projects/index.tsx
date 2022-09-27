@@ -8,14 +8,16 @@ import {
   CtaSection,
   EventSection,
 } from "../../components/common/section";
-import { getAllProjects } from "../../lib/api";
-import { ProjectType } from "../../interfaces/project";
+import { getFourBlogs, getThreeProjects, getTwoEvents } from "../../lib/api";
+import { MarkdownType } from "../../interfaces/markdown";
 
-type AllProjectsType = {
-  allProjects: Array<ProjectType>;
+type Props = {
+  threeProjects: Array<MarkdownType>;
+  fourBlogs: Array<MarkdownType>;
+  twoEvents: Array<MarkdownType>;
 };
 
-const Projects = ({ allProjects }: AllProjectsType) => {
+const Projects = ({ threeProjects, fourBlogs, twoEvents }: Props) => {
   return (
     <>
       {/* Header */}
@@ -25,32 +27,31 @@ const Projects = ({ allProjects }: AllProjectsType) => {
       <ProjectWhatWeDoSection />
 
       {/* Project */}
-      <ProjectProjectSection allProjects={allProjects} />
+      <ProjectProjectSection projects={threeProjects} />
 
       {/* CTA */}
       <CtaSection />
 
       {/* Blogs */}
-      <BlogSection />
+      <BlogSection blogs={fourBlogs} />
 
       {/* Events */}
-      <EventSection />
+      <EventSection events={twoEvents} />
     </>
   );
 };
 export default Projects;
 
 export const getStaticProps = async () => {
-  const projects = getAllProjects([
-    "title",
-    "excerpt",
-    "coverImage",
-    "slug",
-    "date",
-  ]);
+  const threeProjects = getThreeProjects();
+  const fourBlogs = getFourBlogs();
+  const twoEvents = getTwoEvents();
 
-  const allProjects = projects.slice(0, 3);
   return {
-    props: { allProjects },
+    props: {
+      threeProjects: threeProjects,
+      fourBlogs: fourBlogs,
+      twoEvents: twoEvents,
+    },
   };
 };

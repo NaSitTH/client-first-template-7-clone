@@ -5,7 +5,7 @@ const DonationHowToSection = () => {
   const [tab, setTab] = useState(1);
 
   return (
-    <section className="app-container app-section-mt flex space-x-24 border-b-[1px] border-app-border pb-24">
+    <section className="app-container app-section-mt flex space-x-24 border-b-[1px] border-app-border pb-24 2xl:space-x-12">
       <div className="w-full">
         <h2 className="text-app-primary-text">
           How you can contribute to protect Earth
@@ -18,7 +18,7 @@ const DonationHowToSection = () => {
           ut sem vitae risus tristique posuere.
         </p>
       </div>
-      <div className="w-full">
+      <div className="w-full 2xl:w-4/5 xl:w-full">
         <div className="inline-block border-b-[1px] border-app-border text-paragraph font-medium">
           <button
             className={`inline-block ${

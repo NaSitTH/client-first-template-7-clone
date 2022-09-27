@@ -8,13 +8,15 @@ const ContactHeaderSection = () => {
       <div className="app-container flex text-app-primary-text">
         <div className="w-full">
           <TitleSection title="CONTACT US" />
-          <h1 className="mx-24 mt-8">We&apos;d love to hear from you</h1>
-          <p className="mx-24 mt-4 opacity-70">
+          <h1 className="mx-24 mt-8 xl:mr-12">
+            We&apos;d love to hear from you
+          </h1>
+          <p className="mx-24 mt-4 opacity-70 xl:mr-12">
             Have any question in mind or want to enquire? Please feel free to
             contact us through the form or the following details.
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-full 2xl:w-4/5 xl:w-3/5">
           <h4 className="text-2xl leading-[2.4rem]">Let&apos;Talk!</h4>
           <div className="mt-3 flex space-x-8">
             <a className="text-base leading-7" href="tel:+123456789">
@@ -32,7 +34,7 @@ const ContactHeaderSection = () => {
           <p className="mt-2 text-app-secondary-text">
             178 Marconi St., Venice, 34293 Italy
           </p>
-          <div className="mt-8 flex space-x-5 opacity-80">
+          <div className="mt-8 flex space-x-5 opacity-80" id="form">
             <Link href="https://www.facebook.com/">
               <a target="_blank">
                 <FaFacebook className="h-5 w-5" />

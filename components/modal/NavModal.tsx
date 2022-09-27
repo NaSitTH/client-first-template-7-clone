@@ -5,24 +5,27 @@ import { NavLink } from "../layout";
 import { navUrl } from "../../lib/constant";
 
 type Props = {
-  handleClick: () => void;
+  handleClose: () => void;
   isOpen: boolean;
 };
 
-const NavModal = ({ handleClick, isOpen }: Props) => {
+const NavModal = ({ handleClose, isOpen }: Props) => {
   return (
     <div
       className={`fixed top-0 right-0 z-50 h-screen w-1/2 translate-x-[50vw] ${
-        isOpen ? "translate-x-0" : "translate-x-[50vw]"
+        isOpen ? "translate-x-0 opacity-100" : "translate-x-[50vw] opacity-0"
       } bg-white duration-300 ease-in-out`}
     >
       <div className="mx-auto flex h-[67px] w-14/20 items-center justify-end">
-        <button className="" onClick={handleClick}>
+        <button className="" onClick={handleClose}>
           <FaTimes className="h-7 w-7 text-app-primary-text" />
         </button>
       </div>
 
-      <ul className="mx-auto flex w-14/20 flex-col space-y-5 font-medium leading-[1.1875rem]">
+      <ul
+        className="mx-auto flex w-14/20 flex-col space-y-5 font-medium leading-[1.1875rem]"
+        onClick={handleClose}
+      >
         <li>
           <NavLink url="/" title="Home" />
         </li>
@@ -38,9 +41,11 @@ const NavModal = ({ handleClick, isOpen }: Props) => {
         <li>
           <NavLink url={navUrl.contact} title="Contact" />
         </li>
-        <li className="flex h-[43px] items-center justify-center rounded bg-app-primary-text text-white lg:px-6">
+        <li className="h-[43px] rounded bg-app-primary-text text-white">
           <Link href={navUrl.donate}>
-            <a className="">Donate</a>
+            <a className="flex h-full w-full items-center justify-center">
+              Donate
+            </a>
           </Link>
         </li>
       </ul>

@@ -11,8 +11,14 @@ import {
   CtaSection,
   EventSection,
 } from "../components/common/section";
+import { MarkdownType } from "../interfaces/markdown";
+import { getFourBlogs, getTwoEvents } from "../lib/api";
 
-const AboutUs = () => {
+type Props = {
+  [key: string]: Array<MarkdownType>;
+};
+
+const AboutUs = ({ fourBlogs, twoEvents }: Props) => {
   return (
     <>
       {/* Header */}
@@ -35,12 +41,24 @@ const AboutUs = () => {
       <CtaSection />
 
       {/* Blogs */}
-      <BlogSection />
+      <BlogSection blogs={fourBlogs} />
 
       {/* Events */}
-      <EventSection />
+      <EventSection events={twoEvents} />
     </>
   );
 };
 
 export default AboutUs;
+
+export const getStaticProps = async () => {
+  const fourBlogs = getFourBlogs();
+  const twoEvents = getTwoEvents();
+
+  return {
+    props: {
+      fourBlogs: fourBlogs,
+      twoEvents: twoEvents,
+    },
+  };
+};

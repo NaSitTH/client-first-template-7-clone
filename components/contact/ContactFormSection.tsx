@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { SuccessPopup } from "../common/popup";
 
 type FormData = {
   firstName: string;
@@ -9,27 +11,45 @@ type FormData = {
 };
 
 const ContactFormSection = () => {
+  const [isSuccess, setSuccess] = useState(false);
+
+  useEffect(() => {
+    let timer = setTimeout(() => closeSuccessHandler(), 3000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isSuccess]);
+
+  const toggleShowHandler = () => {
+    setSuccess(!isSuccess);
+  };
+
+  const closeSuccessHandler = () => {
+    setSuccess(false);
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = handleSubmit((data) => alert(JSON.stringify(data)));
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+    return toggleShowHandler();
+  });
 
   return (
-    <section className="app-section-mt mx-auto max-w-3xl" id="form">
+    <section className="app-section-mt mx-auto max-w-3xl">
       <form
         className="flex flex-col space-y-8 text-paragraph text-app-primary-text"
         onSubmit={onSubmit}
       >
         <div className="flex space-x-8">
           <div className="flex w-full flex-col">
-            <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-              First Name
-            </label>
+            <label className="form-label">First Name</label>
             <input
-              className="mt-2 border-b-[1px] border-app-border outline-none"
+              className="form-input"
               {...register("firstName", { required: true })}
             />
             {errors.firstName?.type === "required" && (
@@ -39,11 +59,9 @@ const ContactFormSection = () => {
             )}
           </div>
           <div className="flex w-full flex-col">
-            <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-              Last Name
-            </label>
+            <label className="form-label">Last Name</label>
             <input
-              className="mt-2 border-b-[1px] border-app-border outline-none"
+              className="form-input"
               {...register("lastName", { required: true })}
             />
             {errors.lastName?.type === "required" && (
@@ -56,11 +74,9 @@ const ContactFormSection = () => {
 
         <div className="flex space-x-8">
           <div className="flex w-full flex-col">
-            <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-              Email Id
-            </label>
+            <label className="form-label">Email Id</label>
             <input
-              className="mt-2 border-b-[1px] border-app-border outline-none"
+              className="form-input"
               type="email"
               {...register("mail", { required: true })}
             />
@@ -71,11 +87,9 @@ const ContactFormSection = () => {
             )}
           </div>
           <div className="flex w-full flex-col">
-            <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-              Supject
-            </label>
+            <label className="form-label">Supject</label>
             <input
-              className="mt-2 border-b-[1px] border-app-border outline-none"
+              className="form-input"
               {...register("subject", { required: true })}
             />
             {errors.subject?.type === "required" && (
@@ -86,13 +100,11 @@ const ContactFormSection = () => {
           </div>
         </div>
         <div>
-          <label className="text-xs font-bold leading-[1.2rem] opacity-60">
-            Message
-          </label>
+          <label className="form-label">Message</label>
           <textarea
             className="mt-2 h-40 w-full resize-none rounded border-[1px] border-app-border p-5 outline-none placeholder:text-paragraph placeholder:opacity-30"
             placeholder="Type your Messege"
-            {...register("message", { minLength: 5, maxLength: 100 })}
+            {...register("message", { minLength: 0, maxLength: 100 })}
           />
         </div>
         <div className="flex w-full justify-center">
@@ -105,6 +117,7 @@ const ContactFormSection = () => {
           </button>
         </div>
       </form>
+      <SuccessPopup isDisplay={isSuccess} handleClose={closeSuccessHandler} />
     </section>
   );
 };

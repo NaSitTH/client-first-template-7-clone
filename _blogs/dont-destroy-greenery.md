@@ -1,13 +1,10 @@
 ---
-title: "Mission 40K: Tree plantation"
+title: "Don’t destroy greenery and don’t spoil scenery"
+subTitle: "Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim nibh sit."
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim"
 coverImage: "/images/Thumbnail_3.png"
 date: "2022-12-25T08:00:00Z"
 ---
-
-Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit dignissim nibh sit.
-
-![people and grass](/images/Thumbnail_3.png)
 
 ## Mattis elit dignissim nibh sit. Donec arcu sed elit scelerisque
 
@@ -20,10 +17,10 @@ Consectetur feugiat quis hac enim nullam in enim. Tellus nisi dapibus libero rut
 
 ### Transform Your Idea Into Reality with Ether a Leading Digital Agency
 
-Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in in lorem platea mattis.
-Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras volutpat dui. A bibendum viverra eu cras.
-Mauris morbi sed dignissim a in nec aliquam fringilla et.
-Consectetur feugiat quis hac enim nullam in enim.
+- Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in in lorem platea mattis.
+- Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras volutpat dui. A bibendum viverra eu cras.
+- Mauris morbi sed dignissim a in nec aliquam fringilla et.
+- Consectetur feugiat quis hac enim nullam in enim.
 
 ### Transform Your Idea Into Reality with Ether a Leading Digital Agency
 

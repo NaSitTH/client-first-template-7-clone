@@ -14,7 +14,7 @@ const HomeHeroSection = () => {
         />
       </div>
 
-      <div className="absolute top-0 left-1/2 flex h-full w-[1280px] -translate-x-1/2 flex-col text-white 2xl:w-17/20">
+      <div className="absolute top-0 left-1/2 flex h-full w-[1280px] -translate-x-1/2 flex-col text-white 2xl:w-[1024px]">
         <div className="w-full">
           <h1 className="mt-32 w-3/5 pb-12 text-home-heading font-bold 2xl:mt-24 2xl:w-14/20 xl:w-4/5">
             Save the environment today for a better tomorrow

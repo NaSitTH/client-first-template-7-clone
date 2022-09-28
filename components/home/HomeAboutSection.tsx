@@ -8,7 +8,7 @@ const HomeAboutSection = () => {
     <section className="app-container app-section-mt flex items-center xl:flex-col xl:space-y-12">
       <div className="w-full">
         <TitleSection title="KNOW ABOUT US" />
-        <div className="mx-24 mt-8 text-app-primary-text 2xl:mr-12">
+        <div className="mx-24 mt-8 text-app-primary-text 2xl:mr-16">
           <h2>We help nature smile and survive everywhere</h2>
           <p className="mt-8 text-app-secondary-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse

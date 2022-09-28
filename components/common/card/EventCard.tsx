@@ -14,7 +14,7 @@ const EventCard = ({ title, date, url }: Props) => {
 
   return (
     <Link href={url}>
-      <a className="flex h-48 w-full justify-between space-x-6 rounded-lg bg-app-green-secondary pl-10 pr-12 text-app-primary-text">
+      <a className="flex h-48 w-full justify-between space-x-6 rounded-lg bg-app-green-secondary pl-10 pr-12 text-app-primary-text 2xl:px-10">
         <div className="mt-8 grow-0">
           <h2 className="font-medium">{day}</h2>
           <p className="text-button font-medium tracking-[0.125em]">{month}</p>

@@ -5,10 +5,10 @@ import { TitleSection } from "../common/section";
 const DonationHeaderSection = () => {
   return (
     <section className="bg-app-green-tertiary py-24">
-      <div className="app-container flex">
+      <div className="app-container flex space-x-24 2xl:space-x-16">
         <div className="w-full">
           <TitleSection title="DONATE" />
-          <div className="mx-24 2xl:mr-12">
+          <div className="ml-24">
             <h1 className="mt-8 text-app-primary-text">
               Making a donation for Nature.
             </h1>
@@ -20,7 +20,7 @@ const DonationHeaderSection = () => {
             <ButtonLink url="/contact#form" title="Donate now" isPrimary />
           </div>
         </div>
-        <div className="relative h-96 w-3/5 overflow-hidden rounded-xl">
+        <div className="relative h-96 w-3/5 overflow-hidden rounded-xl 2xl:w-1/2">
           <Image
             src="/images/Image_7.png"
             alt="donation"

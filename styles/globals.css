@@ -42,7 +42,7 @@
 }
 
 .app-container {
-  @apply mx-auto max-w-7xl 2xl:w-17/20;
+  @apply mx-auto max-w-7xl 2xl:max-w-5xl xl:w-4/5;
 }
 
 .app-section-mt {

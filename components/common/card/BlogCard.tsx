@@ -19,8 +19,8 @@ const BlogCard = ({ title, excerpt, image, url, isRow }: Props) => {
         }`}
       >
         <div
-          className={`relative h-[192px] w-full ${
-            isRow ? "shrink" : "shrink-0"
+          className={`relative w-full ${
+            isRow ? "h-40 shrink 2xl:h-36" : "h-48 shrink-0 2xl:h-40"
           } overflow-hidden rounded-lg transition group-hover:scale-[.97]`}
         >
           <Image src={image} alt={title} layout="fill" objectFit="cover" />

@@ -11,7 +11,7 @@ const MediaHeaderSection = ({ blogs }: Props) => {
   const threeBlogs = blogs.slice(0, 3);
   return (
     <section className="w-screen bg-app-green-tertiary py-24">
-      <div className="app-container flex space-x-24 2xl:space-x-16">
+      <div className="app-container app-section-space-x flex">
         <div className="w-full">
           <TitleSection title="TOP NEWS" />
           <div className="mt-8 ml-24">

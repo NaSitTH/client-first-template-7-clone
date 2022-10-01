@@ -7,10 +7,10 @@ import { TitleSection } from "../common/section";
 const HomeWhatWeDoSection = () => {
   return (
     <section className="w-screen bg-app-green-tertiary py-24" id="what-we-do">
-      <div className="app-container flex items-center xl:flex-col xl:space-y-12">
+      <div className="app-container app-section-space-x flex items-center xl:flex-col xl:space-y-12">
         <div className="w-full">
           <TitleSection title="WHAT WE DO" />
-          <div className="mx-24 mt-8 text-app-primary-text 2xl:mr-16">
+          <div className="ml-24 mt-8 text-app-primary-text">
             <h2>We care for earth, care for the coming birth</h2>
             <p className="mt-4 text-app-secondary-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.

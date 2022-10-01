@@ -49,6 +49,10 @@
   @apply mt-24;
 }
 
+.app-section-space-x {
+  @apply space-x-24 2xl:space-x-16 xl:space-x-12;
+}
+
 .logo-icon {
   @apply h-7 w-7;
 }

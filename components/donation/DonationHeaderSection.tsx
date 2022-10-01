@@ -5,7 +5,7 @@ import { TitleSection } from "../common/section";
 const DonationHeaderSection = () => {
   return (
     <section className="bg-app-green-tertiary py-24">
-      <div className="app-container flex space-x-24 2xl:space-x-16">
+      <div className="app-container app-section-space-x flex">
         <div className="w-full">
           <TitleSection title="DONATE" />
           <div className="ml-24">

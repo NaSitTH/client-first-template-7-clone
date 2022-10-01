@@ -3,7 +3,7 @@ import { SupporterSection } from "../common/section";
 const AboutMissionSection = () => {
   return (
     <section className="-mt-[224px] w-screen bg-app-green-tertiary text-app-primary-text">
-      <div className="app-container flex space-x-24 px-24 pt-80 xl:space-x-12">
+      <div className="app-container app-section-space-x flex px-24 pt-80">
         <div className="">
           <p className="text-button font-bold tracking-[0.125em]">OUR MISSON</p>
           <h3 className="mt-4">

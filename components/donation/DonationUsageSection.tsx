@@ -1,6 +1,6 @@
 const DonationUsageSection = () => {
   return (
-    <section className="app-container app-section-mt flex space-x-24 2xl:space-x-16">
+    <section className="app-container app-section-mt app-section-space-x flex">
       <h2 className="w-full text-app-primary-text">How we use your donation</h2>
       <p className="w-full text-app-secondary-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse

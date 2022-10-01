@@ -4,7 +4,7 @@ const AboutHeaderSection = () => {
   return (
     <section className="app-container app-section-mt text-app-primary-text">
       <TitleSection title="KNOW ABOUT US" />
-      <div className="mt-8 ml-24 flex space-x-16">
+      <div className="mt-8 ml-24 flex space-x-16 xl:space-x-12">
         <h1 className="w-full">We are a nonprofit team working worldwide</h1>
         <div className="w-[72%]">
           <p className="text-xl font-bold leading-[1.875rem]">

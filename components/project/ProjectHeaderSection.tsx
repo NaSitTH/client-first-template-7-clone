@@ -3,8 +3,8 @@ import { TitleSection } from "../common/section";
 
 const ProjectHeaderSection = () => {
   return (
-    <section className="app-container app-section-mt flex space-x-24">
-      <div className="w-full 2xl:space-x-16 xl:space-x-12">
+    <section className="app-container app-section-mt app-section-space-x flex">
+      <div className="w-full">
         <TitleSection title="WHAT WE DO" />
         <h1 className="mt-8 ml-24 text-app-primary-text">
           We are working worldwide

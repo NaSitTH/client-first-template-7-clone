@@ -5,13 +5,11 @@ import { TitleSection } from "../common/section";
 const ContactHeaderSection = () => {
   return (
     <section className="bg-app-off-white py-24">
-      <div className="app-container flex text-app-primary-text">
+      <div className="app-container app-section-space-x flex text-app-primary-text">
         <div className="w-full">
           <TitleSection title="CONTACT US" />
-          <h1 className="mx-24 mt-8 xl:mr-12">
-            We&apos;d love to hear from you
-          </h1>
-          <p className="mx-24 mt-4 opacity-70 xl:mr-12">
+          <h1 className="ml-24 mt-8">We&apos;d love to hear from you</h1>
+          <p className="ml-24 mt-4 opacity-70 ">
             Have any question in mind or want to enquire? Please feel free to
             contact us through the form or the following details.
           </p>

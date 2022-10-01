@@ -42,7 +42,11 @@
 }
 
 .app-container {
-  @apply mx-auto max-w-7xl 2xl:max-w-5xl xl:w-4/5;
+  @apply mx-auto max-w-7xl 2xl:max-w-5xl xl:w-4/5 lg:w-17/20;
+}
+
+.app-section-width {
+  @apply w-[1280px] 2xl:w-[1024px] xl:w-4/5 lg:w-17/20;
 }
 
 .app-section-mt {
@@ -58,7 +62,7 @@
 }
 
 .logo-wrapper {
-  @apply flex items-center space-x-2;
+  @apply flex items-center space-x-2 lg:justify-center;
 }
 
 .markdown-h {

@@ -6,9 +6,9 @@ import EarthSaverAward from "../../public/images/earth-saver-award.svg";
 const AboutAwardsSection = () => {
   return (
     <section className="app-container app-section-mt text-app-primary-text">
-      <h2 className="text-center">Awards & Recognitions</h2>
-      <div className="mt-12 flex justify-between px-[90px]">
-        <div className="flex flex-col items-center">
+      <h2 className="text-center">Awards &#38; Recognitions</h2>
+      <div className="mt-12 flex justify-between px-[90px] lg:grid lg:grid-cols-3 lg:gap-y-8 md:grid-cols-2">
+        <div className="flex flex-col items-center lg:col-span-3 md:col-span-1">
           <div className="h-auto w-[111px]">
             <NgoAward />
           </div>

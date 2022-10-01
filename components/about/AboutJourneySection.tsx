@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const AboutJourneySection = () => {
   return (
-    <section className="app-container app-section-mt flex items-center space-x-12 overflow-hidden rounded-xl bg-app-black py-16">
-      <div className="ml-24 w-[75%] text-white">
+    <section className="app-container app-section-mt flex items-center space-x-12 overflow-hidden rounded-xl bg-app-black py-16 lg:flex-col lg:space-y-12 lg:space-x-0">
+      <div className="ml-24 w-[75%] text-white lg:ml-0 lg:w-4/5">
         <p className="text-button font-bold tracking-[0.125em]">OUR JOURNEY</p>
         <h2 className="mt-4">How we raised 34M</h2>
         <p className="mt-4 opacity-60">
@@ -29,7 +29,7 @@ const AboutJourneySection = () => {
           </div>
         </div>
       </div>
-      <div className="relative h-[448px] w-full overflow-hidden rounded-l-lg">
+      <div className="relative h-[448px] w-full overflow-hidden rounded-l-lg lg:h-80 lg:w-4/5 lg:rounded-lg md:h-64">
         <Image
           src="/images/Image_16.png"
           alt=""

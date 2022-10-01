@@ -5,7 +5,7 @@ import { TitleSection } from "../common/section";
 
 const HomeAboutSection = () => {
   return (
-    <section className="app-container app-section-mt app-section-space-x flex items-center xl:flex-col xl:space-y-12">
+    <section className="app-container app-section-mt app-section-space-x flex items-center xl:flex-col xl:space-y-12 lg:space-x-0">
       <div className="w-full">
         <TitleSection title="KNOW ABOUT US" />
         <div className="ml-24 mt-8 text-app-primary-text">
@@ -23,7 +23,7 @@ const HomeAboutSection = () => {
           <ButtonLink url="/about-us" title="Learn more" isPrimary />
         </div>
       </div>
-      <div className="relative h-[578px] w-3/5 overflow-hidden rounded-xl xl:h-64 xl:w-full">
+      <div className="relative h-[578px] w-3/5 overflow-hidden rounded-xl xl:h-64 xl:w-full md:h-60">
         <Image
           src="/images/BG_2.png"
           alt="kid hugging each other"

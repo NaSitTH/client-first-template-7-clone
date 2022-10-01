@@ -15,7 +15,7 @@ const MediaBlogSection = ({ blogs }: Props) => {
         Edit this text to make it your own. To edit, simply click directly on
         the text to start We are served
       </p>
-      <div className="mt-12 flex h-[360px] w-full justify-between space-x-6">
+      <div className="mt-12 flex w-full justify-between space-x-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-x-0">
         {blogs.map((data) => {
           return (
             <BlogCard

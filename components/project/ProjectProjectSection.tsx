@@ -14,7 +14,7 @@ const ProjectProjectSection = ({ projects }: Props) => {
       <h2 className="mx-auto mt-4 w-4/6 text-center 2xl:w-4/5 xl:w-full">
         We are Creating sustainable society, for everyone and forever.
       </h2>
-      <div className="mt-16 grid grid-cols-3 gap-6">
+      <div className="mt-16 grid grid-cols-3 gap-6 lg:gap-4 md:mx-auto md:grid-cols-1 md:gap-6">
         {projects.map((data) => {
           return (
             <ProjectCard

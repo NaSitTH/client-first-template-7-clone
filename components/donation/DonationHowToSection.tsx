@@ -5,7 +5,7 @@ const DonationHowToSection = () => {
   const [tab, setTab] = useState(1);
 
   return (
-    <section className="app-container app-section-mt app-section-space-x flex border-b-[1px] border-app-border pb-24">
+    <section className="app-container app-section-mt app-section-space-x flex border-b-[1px] border-app-border pb-24 lg:flex-col lg:space-x-0 lg:space-y-12">
       <div className="w-full">
         <h2 className="text-app-primary-text">
           How you can contribute to protect Earth

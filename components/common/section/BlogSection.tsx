@@ -12,7 +12,7 @@ const BlogSection = ({ blogs }: Props) => {
       <h2 className="text-[2.5rem] leading-[3.5rem] text-app-primary-text">
         Read Our News
       </h2>
-      <div className="mt-12 flex w-full justify-between space-x-6">
+      <div className="mt-12 flex w-full justify-between space-x-6 lg:grid lg:grid-cols-2 lg:gap-8 lg:space-x-0">
         {blogs.map((data) => {
           return (
             <BlogCard

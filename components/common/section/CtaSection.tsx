@@ -5,7 +5,7 @@ import { ButtonLink } from "../button";
 const CtaSection = () => {
   return (
     <section className="app-container app-section-mt overflow-hidden rounded-xl">
-      <div className="relative h-[384px] w-full">
+      <div className="relative h-96 w-full md:h-64">
         <Image
           src="/images/Thumbnail_1.png"
           alt="windmill"
@@ -14,10 +14,10 @@ const CtaSection = () => {
         />
         <div className="absolute top-0 left-0 h-full w-full bg-app-black opacity-50" />
         <div className="absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center space-y-8 text-white">
-          <h2 className="w-1/2 text-center 2xl:w-4/5 xl:w-full">
+          <h2 className="w-1/2 text-center 2xl:w-4/5 xl:w-full lg:w-4/5 md:text-h3">
             You can contribute to make the environment greener!
           </h2>
-          <div className="flex w-1/2 justify-center space-x-8">
+          <div className="flex justify-center space-x-8">
             <ButtonLink
               url="/contact#form"
               title="Join as a volunteer"

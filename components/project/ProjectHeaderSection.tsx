@@ -3,7 +3,7 @@ import { TitleSection } from "../common/section";
 
 const ProjectHeaderSection = () => {
   return (
-    <section className="app-container app-section-mt app-section-space-x flex">
+    <section className="app-container app-section-mt app-section-space-x flex lg:flex-wrap lg:space-x-0 lg:space-y-12">
       <div className="w-full">
         <TitleSection title="WHAT WE DO" />
         <h1 className="mt-8 ml-24 text-app-primary-text">
@@ -15,7 +15,7 @@ const ProjectHeaderSection = () => {
           ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
         </p>
       </div>
-      <div className="relative h-96 w-3/5 overflow-hidden rounded-xl">
+      <div className="relative h-96 w-3/5 overflow-hidden rounded-xl lg:h-72 lg:w-full md:h-64">
         <Image
           src="/images/Image_6.png"
           alt=""

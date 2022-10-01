@@ -40,7 +40,7 @@ const ContactFormSection = () => {
   });
 
   return (
-    <section className="app-section-mt mx-auto max-w-3xl">
+    <section className="app-section-mt mx-auto max-w-3xl lg:max-w-2xl md:max-w-xl">
       <form
         className="flex flex-col space-y-8 text-paragraph text-app-primary-text"
         onSubmit={onSubmit}

@@ -53,7 +53,7 @@ const Header = () => {
           </li>
           <li className="flex items-center rounded bg-app-primary-text text-white lg:px-6">
             <Link href={navUrl.donate}>
-              <a className="px-8 py-4">Donate</a>
+              <a className="px-8 py-4 lg:px-0">Donate</a>
             </Link>
           </li>
         </ul>

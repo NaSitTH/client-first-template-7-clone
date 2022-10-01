@@ -7,7 +7,7 @@ import { TitleSection } from "../common/section";
 const HomeWhatWeDoSection = () => {
   return (
     <section className="w-screen bg-app-green-tertiary py-24" id="what-we-do">
-      <div className="app-container app-section-space-x flex items-center xl:flex-col xl:space-y-12">
+      <div className="app-container app-section-space-x flex items-center xl:flex-col xl:space-y-12 lg:space-x-0">
         <div className="w-full">
           <TitleSection title="WHAT WE DO" />
           <div className="ml-24 mt-8 text-app-primary-text">
@@ -16,7 +16,7 @@ const HomeWhatWeDoSection = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique.
             </p>
-            <div className="mt-8 flex w-[480px] flex-col justify-between space-y-6 border-l-[1px] border-app-border pl-6">
+            <div className="mt-8 flex w-[480px] flex-col justify-between space-y-6 border-l-[1px] border-app-border pl-6 md:w-full">
               <FunctionCard
                 title="Build Healthy Cities"
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
@@ -40,7 +40,7 @@ const HomeWhatWeDoSection = () => {
             </div>
           </div>
         </div>
-        <div className="relative h-[658px] w-3/5 overflow-hidden rounded-xl 2xl:h-[680px] xl:h-80 xl:w-full">
+        <div className="relative h-[658px] w-3/5 overflow-hidden rounded-xl 2xl:h-[680px] xl:h-80 xl:w-full lg:h-64 md:h-60">
           <Image
             src="/images/Image_5.png"
             alt="man playing with dog"

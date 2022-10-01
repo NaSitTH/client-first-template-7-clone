@@ -18,7 +18,7 @@ const SupporterSection = () => {
           <span className="h-[1px] w-full bg-app-border"></span>
         </span>
       </div>
-      <div className="mt-8 flex items-center justify-between text-paragraph font-medium text-app-primary-text/60">
+      <div className="mt-8 flex items-center justify-between text-paragraph font-medium text-app-primary-text/60 lg:grid lg:grid-cols-3 lg:gap-y-8">
         <div className="logo-wrapper">
           <FaGithub className="logo-icon" />
           <span>logoipsum</span>

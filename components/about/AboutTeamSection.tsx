@@ -8,11 +8,11 @@ const AboutTeamSection = () => {
       id="team"
     >
       <h2 className="text-center ">Meet our team</h2>
-      <p className="mt-4 w-5/12 text-center text-app-secondary-text 2xl:w-3/5 ">
+      <p className="mt-4 w-5/12 text-center text-app-secondary-text 2xl:w-3/5 lg:w-4/5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         varius enim in eros elementum tristique.
       </p>
-      <div className="mt-12 grid grid-cols-4 gap-x-8 gap-y-12 xl:grid-cols-3">
+      <div className="mt-12 grid grid-cols-4 gap-x-8 gap-y-12 xl:grid-cols-3 lg:gap-x-6 md:grid-cols-2">
         {teamMembers.map((data) => {
           return <MemberCard key={data.fullName} data={data} />;
         })}

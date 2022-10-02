@@ -10,12 +10,12 @@ type Props = {
 const MediaHeaderSection = ({ blogs }: Props) => {
   const threeBlogs = blogs.slice(0, 3);
   return (
-    <section className="w-screen bg-app-green-tertiary py-24">
+    <section className="w-screen bg-app-green-tertiary py-24 md:py-16 sm:pt-12">
       <div className="app-container app-section-space-x flex">
         <div className="w-full">
           <TitleSection title="TOP NEWS" />
-          <div className="mt-8 ml-24">
-            <h1 className="text-app-primary-text">
+          <div className="mt-8 ml-24 sm:ml-0">
+            <h1 className="text-app-primary-text xs:text-h2">
               Our goal is to make water available for everyone
             </h1>
             <p className="mt-4 mb-8 text-app-secondary-text">

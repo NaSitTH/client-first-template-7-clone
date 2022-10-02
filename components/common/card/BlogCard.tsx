@@ -26,7 +26,7 @@ const BlogCard = ({ title, excerpt, image, url, isRow }: Props) => {
           <Image src={image} alt={title} layout="fill" objectFit="cover" />
         </div>
         <div className={isRow ? "mt-0 " : "mt-4"}>
-          <p className="w-full text-xl font-medium leading-[1.875rem] text-[#1C1D28] line-clamp-2 hover:line-clamp-none">
+          <p className="w-full text-xl font-medium leading-[1.875rem] text-[#1C1D28] line-clamp-2 hover:line-clamp-none sm:line-clamp-3">
             {title}
           </p>
           <p className="mt-2 text-app-secondary-text line-clamp-3 group-hover:line-clamp-none">

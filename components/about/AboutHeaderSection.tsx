@@ -2,10 +2,12 @@ import { TitleSection } from "../common/section";
 
 const AboutHeaderSection = () => {
   return (
-    <section className="app-container app-section-mt text-app-primary-text">
+    <section className="app-container app-section-mt text-app-primary-text md:mt-16 sm:mt-12">
       <TitleSection title="KNOW ABOUT US" />
-      <div className="mt-8 ml-24 flex space-x-16 xl:space-x-12 lg:flex-col lg:space-x-0 lg:space-y-12">
-        <h1 className="w-full">We are a nonprofit team working worldwide</h1>
+      <div className="mt-8 ml-24 flex space-x-16 xl:space-x-12 lg:flex-col lg:space-x-0 lg:space-y-12 sm:ml-0">
+        <h1 className="w-full xs:text-h2">
+          We are a nonprofit team working worldwide
+        </h1>
         <div className="w-[72%] lg:w-full">
           <p className="text-xl font-bold leading-[1.875rem]">
             Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc

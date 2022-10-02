@@ -40,12 +40,12 @@ const ContactFormSection = () => {
   });
 
   return (
-    <section className="app-section-mt mx-auto max-w-3xl lg:max-w-2xl md:max-w-xl">
+    <section className="app-section-mt mx-auto max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-sm xs:w-17/20">
       <form
         className="flex flex-col space-y-8 text-paragraph text-app-primary-text"
         onSubmit={onSubmit}
       >
-        <div className="flex space-x-8">
+        <div className="flex space-x-8 sm:flex-col sm:space-x-0 sm:space-y-8">
           <div className="flex w-full flex-col">
             <label className="form-label">First Name</label>
             <input
@@ -72,7 +72,7 @@ const ContactFormSection = () => {
           </div>
         </div>
 
-        <div className="flex space-x-8">
+        <div className="flex space-x-8 sm:flex-col sm:space-x-0 sm:space-y-8">
           <div className="flex w-full flex-col">
             <label className="form-label">Email Id</label>
             <input

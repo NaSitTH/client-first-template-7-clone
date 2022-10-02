@@ -50,7 +50,7 @@
 }
 
 .app-section-mt {
-  @apply mt-24;
+  @apply mt-24 xs:mt-16;
 }
 
 .app-section-space-x {
@@ -58,7 +58,7 @@
 }
 
 .logo-icon {
-  @apply h-7 w-7;
+  @apply h-7 w-7 xs:h-6 xs:w-6;
 }
 
 .logo-wrapper {
@@ -86,7 +86,7 @@
 }
 
 .markdown-img {
-  @apply prose-img:my-8 prose-img:h-80 prose-img:w-full prose-img:rounded-xl prose-img:object-cover;
+  @apply prose-img:my-8 prose-img:h-80 prose-img:w-full prose-img:rounded-xl prose-img:object-cover md:prose-img:h-60 xs:prose-img:h-40;
 }
 
 .markdown-content {

@@ -14,7 +14,7 @@ const ButtonLink = ({ url, title, isPrimary }: Props) => {
           isPrimary
             ? "bg-app-green-primary text-white"
             : "bg-white text-app-primary-text"
-        } px-8 py-4 text-button font-medium md:py-3 md:px-6`}
+        } px-8 py-4 text-button font-medium md:py-3 md:px-6 xs:py-2 xs:px-4 xs:text-paragraph-small`}
       >
         {title}
       </a>

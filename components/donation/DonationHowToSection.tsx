@@ -5,9 +5,9 @@ const DonationHowToSection = () => {
   const [tab, setTab] = useState(1);
 
   return (
-    <section className="app-container app-section-mt app-section-space-x flex border-b-[1px] border-app-border pb-24 lg:flex-col lg:space-x-0 lg:space-y-12">
+    <section className="app-container app-section-mt app-section-space-x flex border-b-[1px] border-app-border pb-24 lg:flex-col lg:space-x-0 lg:space-y-12 xs:pb-16">
       <div className="w-full">
-        <h2 className="text-app-primary-text">
+        <h2 className="text-app-primary-text xs:text-h3">
           How you can contribute to protect Earth
         </h2>
         <p className="mt-6 text-app-secondary-text">
@@ -19,27 +19,27 @@ const DonationHowToSection = () => {
         </p>
       </div>
       <div className="w-full 2xl:w-4/5 xl:w-full">
-        <div className="inline-block border-b-[1px] border-app-border text-paragraph font-medium">
+        <div className="inline-block border-b-[1px] border-app-border text-paragraph font-medium xs:flex xs:flex-col xs:space-y-2 xs:px-12">
           <button
             className={`inline-block ${
-              tab === 1 ? "border-b-2" : "border-none"
-            } border-app-green-primary py-2 px-6  text-app-secondary-text`}
+              tab === 1 ? "border-app-green-primary " : "border-white"
+            } border-b-2 py-2 px-6 text-app-secondary-text xs:border-y-2`}
             onClick={() => setTab(1)}
           >
             Overview
           </button>
           <button
             className={`inline-block ${
-              tab === 2 ? "border-b-2" : "border-none"
-            } border-app-green-primary py-2 px-6 text-app-secondary-text`}
+              tab === 2 ? "border-app-green-primary " : "border-white"
+            } border-b-2 py-2 px-6 text-app-secondary-text xs:border-y-2`}
             onClick={() => setTab(2)}
           >
             Impact
           </button>
           <button
             className={`inline-block ${
-              tab === 3 ? "border-b-2" : "border-none"
-            } border-app-green-primary py-2 px-6 text-app-secondary-text`}
+              tab === 3 ? "border-app-green-primary " : "border-white"
+            } border-b-2 py-2 px-6 text-app-secondary-text xs:border-y-2`}
             onClick={() => setTab(3)}
           >
             What You get

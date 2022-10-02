@@ -10,10 +10,12 @@ import { FunctionCard } from "../common/card";
 
 const ProjectWhatWeDoSection = () => {
   return (
-    <section className="app-section-mt bg-app-green-tertiary py-24">
+    <section className="app-section-mt bg-app-green-tertiary py-24 xs:py-16">
       <div className="app-container">
-        <h2>What we do for the environment</h2>
-        <div className="mt-16 grid grid-cols-3 gap-y-12 gap-x-16 xl:gap-x-8">
+        <h2 className="lg:text-center xs:text-h3">
+          What we do for the environment
+        </h2>
+        <div className="mt-16 grid grid-cols-3 gap-y-12 gap-x-16 xl:grid-cols-2 lg:gap-x-12 md:grid-cols-1 md:px-12 sm:gap-8 sm:px-4 xs:mt-8">
           <FunctionCard
             title="Build Healthy Cities"
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."

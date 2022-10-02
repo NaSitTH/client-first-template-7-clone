@@ -29,7 +29,7 @@ const Header = () => {
         scrollPos >= 100 && !navIsOpen ? "bg-white opacity-90 shadow-md" : ""
       }`}
     >
-      <nav className="app-container flex h-[68px] items-center justify-between">
+      <nav className="app-container flex h-[68px] items-center justify-between md:h-14">
         <Link href={navUrl.home}>
           <a className="flex h-full items-center">
             <h4>Logo</h4>
@@ -53,7 +53,7 @@ const Header = () => {
           </li>
           <li className="flex items-center rounded bg-app-primary-text text-white lg:px-6">
             <Link href={navUrl.donate}>
-              <a className="px-8 py-4">Donate</a>
+              <a className="px-8 py-4 lg:px-0">Donate</a>
             </Link>
           </li>
         </ul>

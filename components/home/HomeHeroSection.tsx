@@ -4,7 +4,7 @@ import { ButtonLink } from "../common/button";
 
 const HomeHeroSection = () => {
   return (
-    <section className="relative h-[calc(100vh-68px)]">
+    <section className="relative h-[calc(100vh-68px)] md:h-[calc(100vh-56px)] ">
       <div className="relative h-full w-screen">
         <Image
           src="/images/BG_1.png"
@@ -14,9 +14,9 @@ const HomeHeroSection = () => {
         />
       </div>
 
-      <div className="absolute top-0 left-1/2 flex h-full w-[1280px] -translate-x-1/2 flex-col text-white 2xl:w-17/20">
-        <div className="w-full">
-          <h1 className="mt-32 w-3/5 pb-12 text-home-heading font-bold 2xl:mt-24 2xl:w-14/20 xl:w-4/5">
+      <div className="app-section-width absolute top-0 left-1/2 flex h-full -translate-x-1/2 flex-col text-white">
+        <div className="w-full xs:flex xs:h-full xs:flex-col xs:items-center xs:justify-center">
+          <h1 className="mt-32 w-3/5 pb-12 text-home-heading font-bold 2xl:mt-24 2xl:w-14/20 xl:w-4/5 lg:mt-12 lg:pb-8 lg:text-h2 md:mt-8 md:w-full sm:mt-44 xs:mt-0 xs:text-center xs:text-h2">
             Save the environment today for a better tomorrow
           </h1>
           <div className="flex items-center space-x-6">
@@ -30,14 +30,14 @@ const HomeHeroSection = () => {
           </div>
         </div>
 
-        <div className="flex h-full shrink items-end justify-between pb-20 xl:pb-12">
-          <p className="text-lg font-medium leading-[1.32rem]">
+        <div className="flex h-full shrink items-end justify-between pb-20 xl:pb-12 lg:pb-8 md:pb-12 xs:hidden">
+          <p className="text-lg font-medium leading-[1.32rem] md:text-sm md:leading-4">
             23,800 trees planted
           </p>
-          <span className="flex h-5 grow items-center px-6">
+          <span className="flex h-5 grow items-center px-6 md:h-4 sm:hidden">
             <span className="h-[1px] w-full bg-app-border"></span>
           </span>
-          <p className="text-lg font-medium leading-[1.32rem]">
+          <p className="text-lg font-medium leading-[1.32rem] md:text-sm md:leading-4">
             5840 donations collected
           </p>
         </div>

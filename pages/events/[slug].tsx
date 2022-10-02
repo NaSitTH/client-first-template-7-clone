@@ -23,9 +23,9 @@ const Event = ({ event, twoEvents }: Props) => {
 
       <EventContentSection content={event.content} />
 
-      <section className="app-section-mt mx-auto max-w-3xl">
+      <section className="app-section-mt mx-auto max-w-3xl lg:w-17/20">
         <div className="flex items-center">
-          <h2 className="text-[2.5rem] leading-[3.5rem] text-app-primary-text">
+          <h2 className="text-[2.5rem] leading-[3.5rem] text-app-primary-text xs:text-h3">
             Other events
           </h2>
           <span className="ml-6 flex h-14 grow items-center">

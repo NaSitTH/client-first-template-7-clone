@@ -23,7 +23,7 @@ const ProjectId = ({ project, threeProjects }: Props) => {
 
       <ProjectFeaturesSection />
 
-      <section className="app-container app-section-mt grid grid-cols-3 gap-6">
+      <section className="app-container app-section-mt grid grid-cols-3 gap-6 lg:gap-4 md:mx-auto md:grid-cols-1 md:gap-8">
         {threeProjects.map((data) => {
           return (
             <ProjectCard

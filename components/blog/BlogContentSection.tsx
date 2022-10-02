@@ -15,13 +15,13 @@ const BlogContentSection = ({
   const dateFormatted = format(new Date(date), "dd MMM yyyy");
 
   return (
-    <section className="app-container app-section-mt text-app-primary-text">
+    <section className="app-container app-section-mt text-app-primary-text md:mt-16 sm:mt-12">
       <div className="mx-auto max-w-5xl">
         <p className="text-center font-medium">{dateFormatted}</p>
-        <h1 className="mt-8 text-center">{title}</h1>
+        <h1 className="mt-8 text-center xs:text-h2">{title}</h1>
         <p className="mt-4 text-center text-app-secondary-text">{subTitle}</p>
       </div>
-      <div className="relative mt-12 h-96 w-full overflow-hidden rounded-xl">
+      <div className="relative mt-12 h-96 w-full overflow-hidden rounded-xl md:h-60 xs:h-40">
         <Image src={image} alt={title} layout="fill" objectFit="cover" />
       </div>
       <div

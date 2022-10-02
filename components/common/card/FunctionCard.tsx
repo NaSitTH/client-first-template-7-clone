@@ -14,7 +14,7 @@ const FunctionCard = ({ title, text, icon }: Props) => {
           {icon}
         </div>
         <div>
-          <p className="text-2xl font-bold leading-[1.76rem] text-app-primary-text">
+          <p className="text-2xl font-bold leading-[1.76rem] text-app-primary-text xs:text-xl">
             {title}
           </p>
           <p className="mt-2 text-app-secondary-text">{text}</p>

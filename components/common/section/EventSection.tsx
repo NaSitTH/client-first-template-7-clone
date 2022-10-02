@@ -9,7 +9,7 @@ const EventSection = ({ events }: Props) => {
   return (
     <section className="app-container app-section-mt">
       <div className="flex items-center">
-        <h2 className="text-[2.5rem] leading-[3.5rem] text-app-primary-text">
+        <h2 className="text-[2.5rem] leading-[3.5rem] text-app-primary-text xs:text-h3">
           Our Events
         </h2>
         <span className="ml-6 flex h-14 grow items-center">

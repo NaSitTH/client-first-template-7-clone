@@ -10,12 +10,12 @@ type Props = {
 const MediaHeaderSection = ({ blogs }: Props) => {
   const threeBlogs = blogs.slice(0, 3);
   return (
-    <section className="w-screen bg-app-green-tertiary py-24">
-      <div className="app-container flex space-x-24 2xl:space-x-12">
+    <section className="w-screen bg-app-green-tertiary py-24 md:py-16 sm:pt-12">
+      <div className="app-container app-section-space-x flex">
         <div className="w-full">
           <TitleSection title="TOP NEWS" />
-          <div className="mt-8 ml-24">
-            <h1 className="text-app-primary-text">
+          <div className="mt-8 ml-24 sm:ml-0">
+            <h1 className="text-app-primary-text xs:text-h2">
               Our goal is to make water available for everyone
             </h1>
             <p className="mt-4 mb-8 text-app-secondary-text">
@@ -25,7 +25,7 @@ const MediaHeaderSection = ({ blogs }: Props) => {
             <ButtonLink url="#recent-news" title="Read More" isPrimary />
           </div>
         </div>
-        <div className="flex w-full flex-col space-y-6 rounded-xl bg-white py-6 pl-6 pr-14 xl:hidden">
+        <div className="flex w-full flex-col space-y-6 rounded-xl bg-white py-6 pl-6 pr-14 2xl:w-4/5 2xl:p-6 xl:hidden">
           {blogs.map((data) => {
             return (
               <BlogCard

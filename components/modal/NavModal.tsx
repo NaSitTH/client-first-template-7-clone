@@ -16,7 +16,7 @@ const NavModal = ({ handleClose, isOpen }: Props) => {
         isOpen ? "translate-x-0 opacity-100" : "translate-x-[50vw] opacity-0"
       } bg-white duration-300 ease-in-out`}
     >
-      <div className="mx-auto flex h-[67px] w-14/20 items-center justify-end">
+      <div className="mx-auto flex h-[68px] w-14/20 items-center justify-end md:h-14">
         <button className="" onClick={handleClose}>
           <FaTimes className="h-7 w-7 text-app-primary-text" />
         </button>
